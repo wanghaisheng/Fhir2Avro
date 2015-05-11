@@ -1,0 +1,70 @@
+[
+  {
+    "namespace": "com.fhir2avro.util.avro",
+    "type": "enum",
+    "name": "Size",
+    "symbols": ["UNKNOWN", "SMALL", "MEDIUM", "LARGE"]
+  },
+  {"namespace": "com.fhir2avro.util.avro",
+   "type": "record",
+   "name": "JellyBeanV1",
+   "fields": [
+       {"name": "name", "type": "string"},
+       {"name": "id",  "type": "int"}
+   ]
+  },
+  {"namespace": "com.fhir2avro.util.avro",
+   "type": "record",
+   "name": "JellyBeanV2",
+   "fields": [
+       {"name": "name", "type": "string"},
+       {"name": "id",  "type": "int"},
+       {"name": "color", "type": "string"}
+   ]
+  },
+  {"namespace": "com.fhir2avro.util.avro",
+   "type": "record",
+   "name": "JellyBeanV3",
+   "fields": [
+       {"name": "name", "type": "string"},
+       {"name": "id",  "type": "int"},
+       {"name": "color", "type": "string", "default": "Default"}
+   ]
+  },
+  {"namespace": "com.fhir2avro.util.avro",
+   "type": "record",
+   "name": "JellyBeanV4",
+   "fields": [
+       {"name": "name", "type": "string"},
+       {"name": "id",  "type": "int"},
+       {"name": "size", "type": "Size"}
+   ]
+  },
+  {
+    "namespace": "com.fhir2avro.util.avro",
+    "type": "record",
+    "name": "JellyBeanV5",
+    "fields": [
+      {"name": "name", "type": "string"},
+      {"name": "id",  "type": "int"},
+      {"name": "size", "type": "Size", "default": "UNKNOWN"}
+   ]
+  },
+  {"namespace": "com.fhir2avro.util.avro",
+   "type": "record",
+   "name": "JellyBeanV6",
+   "fields": [
+       {"name": "name", "type": "string"},
+       {"name": "id",  "type": "int"},
+       {"name": "texture", "type": ["string","null"]}
+   ]
+  },
+  {"namespace": "com.fhir2avro.util.avro",
+     "type": "record",
+     "name": "JellyBeanV7",
+     "fields": [
+         {"name": "id",  "type": "int"},
+         {"name": "name", "type": "string"}
+     ]
+    }
+]
