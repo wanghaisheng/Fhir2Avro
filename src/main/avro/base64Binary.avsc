@@ -1,0 +1,8 @@
+{
+   "namespace": "com.fhir2avro.datatype",
+   "name": "base64Binary",
+   "type": "record",
+   "fields": [
+      {"name": "value", "type": "bytes"}
+     ]
+}
