@@ -1,0 +1,1557 @@
+/**
+*本文件的更新日期为:2015-06-24T03:16:33.183+00:00
+ *参考资料为: wget http://hl7-fhir.github.io/profiles-resources.json
+*/
+@namespace("org.fhir.messages.resources")
+protocol Resource {
+ import idl "datatypes.avdl";/**
+*该资源类型的父类型为:
+ *该资源类型的名称为:VisionPrescription
+ *该资源类型的全称为:Prescription for Vision correction products for a patient
+ *该资源类型的定义为:An authorization for the supply of glasses and/or contact lenses to a patient.
+ *该资源类型的描述为:
+ *该资源类型的描述为:
+*/
+  record VisionPrescription {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.id
+ *该字段的全称为:Logical id of this artifact
+ *该字段的定义为:The logical id of the resource, as used in the url for the resource. Once assigned, this value never changes.
+ *该字段的描述为:The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.meta
+ *该字段的全称为:Metadata about the resource
+ *该字段的定义为:The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Meta
+*/
+ union { null, Meta} meta = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.implicitRules
+ *该字段的全称为:A set of rules under which this content was created
+ *该字段的定义为:A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.
+ *该字段的描述为:Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} implicitRules = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.language
+ *该字段的全称为:Language of the resource content
+ *该字段的定义为:The base language in which the resource is written.
+ *该字段的描述为:Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} language = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.text
+ *该字段的全称为:Text summary of the resource, for human interpretation
+ *该字段的定义为:A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
+ *该字段的描述为:Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Narrative
+*/
+ union { null, Narrative} text = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.contained
+ *该字段的全称为:Contained, inline Resources
+ *该字段的定义为:These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.
+ *该字段的描述为:This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Resource
+*/
+ union { null,  array<Resource>} contained = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.identifier
+ *该字段的全称为:Business identifier
+ *该字段的定义为:Business identifier which may be used by other parties to reference or identify the prescription.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Identifier
+*/
+ union { null,  array<Identifier>} identifier = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dateWritten
+ *该字段的全称为:When prescription was authorized
+ *该字段的定义为:The date (and perhaps time) when the prescription was written.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:dateTime
+*/
+ union { null, dateTime} dateWritten = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.patient
+ *该字段的全称为:Who prescription is for
+ *该字段的定义为:A link to a resource representing the person to whom the Vision products will be supplied.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+ union { null, Reference} patient = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.prescriber
+ *该字段的全称为:Who authorizes the Vision product
+ *该字段的定义为:The healthcare professional responsible for authorizing the prescription.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+ union { null, Reference} prescriber = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.encounter
+ *该字段的全称为:Created during encounter / admission / stay
+ *该字段的定义为:A link to a resource that identifies the particular occurrence of contact between patient and health care provider.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+ union { null, Reference} encounter = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.reason[x]
+ *该字段的全称为:Reason or indication for writing the prescription
+ *该字段的定义为:Can be the reason or the indication for writing the prescription.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:CodeableConcept
+*/
+ union { null, CodeableConcept} reason[x] = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense
+ *该字段的全称为:Vision supply authorization
+ *该字段的定义为:Deals with details of the dispense part of the supply specification.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} dispense = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} dispense.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} dispense.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} dispense.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.product
+ *该字段的全称为:Product to be supplied
+ *该字段的定义为:Identifies the type of Vision correction product which is required for the patient.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Coding
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.eye
+ *该字段的全称为:right | left
+ *该字段的定义为:The eye for which the lens applies.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} dispense.eye = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.sphere
+ *该字段的全称为:Lens sphere
+ *该字段的定义为:Lens power measured in diopters (0.25 units).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} dispense.sphere = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.cylinder
+ *该字段的全称为:Lens cylinder
+ *该字段的定义为:Power adjustment for astigmatism measured in diopters (0.25 units).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} dispense.cylinder = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.axis
+ *该字段的全称为:Lens axis
+ *该字段的定义为:Adjustment for astigmatism measured in integer degrees.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} dispense.axis = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.prism
+ *该字段的全称为:Lens prism
+ *该字段的定义为:Amount of prism to compensate for eye alignment in fractional units.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} dispense.prism = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.base
+ *该字段的全称为:up | down | in | out
+ *该字段的定义为:The relative base, or reference lens edge, for the prism.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} dispense.base = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.add
+ *该字段的全称为:Lens add
+ *该字段的定义为:Power adjustment for multifocal lenses measured in diopters (0.25 units).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} dispense.add = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.power
+ *该字段的全称为:Contact Lens power
+ *该字段的定义为:Contact lens power measured in diopters (0.25 units).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} dispense.power = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.backCurve
+ *该字段的全称为:Contact lens back curvature
+ *该字段的定义为:Back Curvature measured in millimeters.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} dispense.backCurve = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.diameter
+ *该字段的全称为:Contact Lens diameter
+ *该字段的定义为:Contact lens diameter measured in millimeters.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} dispense.diameter = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.duration
+ *该字段的全称为:Lens wear duration
+ *该字段的定义为:The recommended maximum wear period for the lens.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Quantity
+*/
+ union { null, Quantity} dispense.duration = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.color
+ *该字段的全称为:Lens add
+ *该字段的定义为:Special color or pattern.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} dispense.color = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.brand
+ *该字段的全称为:Lens add
+ *该字段的定义为:Brand recommendations or restrictions.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} dispense.brand = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:VisionPrescription.dispense.notes
+ *该字段的全称为:Notes for coatings
+ *该字段的定义为:Notes for special requirements such as coatings and lens materials.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} dispense.notes = null;
+}
+}
+formation that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} setup.operation.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.setup.operation.type
+ *该字段的全称为:read | vread | update | delete | history | create | search | transaction | conformance | tags | mailbox | document | assertion | assertion_false | assertion_warning
+ *该字段的定义为:read | vread | update | delete | history | create | search | transaction | conformance | tags | mailbox | document | assertion | assertion_false | assertion_warning.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.setup.operation.source
+ *该字段的全称为:The id of the fixture used as the body in a PUT or POST
+ *该字段的定义为:The internal id of the fixture used as the body of any operation.type that results in a PUT or POST.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} setup.operation.source = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.setup.operation.target
+ *该字段的全称为:The id of the fixture used as the target of a PUT or POST, or the id of the fixture used to store the results of a GET
+ *该字段的定义为:The id of the fixture used as the target of any operation.type that results in a PUT or POST, or the id of the fixture used to store the results of a GET.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} setup.operation.target = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.setup.operation.destination
+ *该字段的全称为:Which server to perform the operation on
+ *该字段的定义为:Which server to perform the operation on.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} setup.operation.destination = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.setup.operation.parameter
+ *该字段的全称为:Arguments to an operation
+ *该字段的定义为:Arguments to an operation.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} setup.operation.parameter = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.setup.operation.responseId
+ *该字段的全称为:Response id
+ *该字段的定义为:The fixture id (maybe new) to map to the response.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} setup.operation.responseId = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.setup.operation.contentType
+ *该字段的全称为:xml | json
+ *该字段的定义为:The content-type or mime-type to use for RESTful operation.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} setup.operation.contentType = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test
+ *该字段的全称为:A test in this script
+ *该字段的定义为:A test in this script.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} test = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.name
+ *该字段的全称为:The name of this test
+ *该字段的定义为:The name of this test.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} test.name = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.description
+ *该字段的全称为:Short description of the test
+ *该字段的定义为:A short description of the test.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} test.description = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata
+ *该字段的全称为:Metadata about this Test
+ *该字段的定义为:Metadata about this Test.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null, Element} test.metadata = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.metadata.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.metadata.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.metadata.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.link
+ *该字段的全称为:Link this test to the specification
+ *该字段的定义为:A link to the FHIR specification that this test is covering.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} test.metadata.link = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.link.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.metadata.link.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.link.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.metadata.link.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.link.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.metadata.link.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.link.url
+ *该字段的全称为:URL to the specification
+ *该字段的定义为:URL to a particular requirement or feature within the FHIR specification.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.link.description
+ *该字段的全称为:Short description
+ *该字段的定义为:Short description of the link.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} test.metadata.link.description = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.requires
+ *该字段的全称为:Required capability that is assumed to function correctly on the FHIR server being tested
+ *该字段的定义为:The required capability must exist and is assumed to function correctly on the FHIR server being tested.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} test.metadata.requires = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.requires.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.metadata.requires.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.requires.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.metadata.requires.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.requires.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.metadata.requires.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.requires.type
+ *该字段的全称为:Required resource type
+ *该字段的定义为:The resource type that the FHIR server must support.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.requires.operations
+ *该字段的全称为:Required operations
+ *该字段的定义为:The operations (comma-separated) that the FHIR server must support for the specified resource type. See TestOperationType.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.requires.destination
+ *该字段的全称为:Which server this requirement applies to
+ *该字段的定义为:Which server this requirement applies to.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} test.metadata.requires.destination = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.validates
+ *该字段的全称为:Capability being verified
+ *该字段的定义为:The capability that this test verifies.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} test.metadata.validates = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.validates.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.metadata.validates.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.validates.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.metadata.validates.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.validates.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.metadata.validates.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.validates.type
+ *该字段的全称为:Verified resource type
+ *该字段的定义为:The resource type that the FHIR server must support.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.validates.operations
+ *该字段的全称为:Verified operations
+ *该字段的定义为:The operations (comma-separated) that the FHIR server must support for the specified resource type. See TestOperationType.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.metadata.validates.destination
+ *该字段的全称为:Which server this validation applies to
+ *该字段的定义为:Which server this validation applies to.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} test.metadata.validates.destination = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation
+ *该字段的全称为:Each test must have at least one operation
+ *该字段的定义为:Each test must have at least one operation. Operation and assertion elements can be mixed together.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.operation.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.operation.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} test.operation.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.type
+ *该字段的全称为:read | vread | update | delete | history | create | search | transaction | conformance | tags | mailbox | document | assertion | assertion_false | assertion_warning
+ *该字段的定义为:read | vread | update | delete | history | create | search | transaction | conformance | tags | mailbox | document | assertion | assertion_false | assertion_warning.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.source
+ *该字段的全称为:The id of the fixture used as the body in a PUT or POST
+ *该字段的定义为:The internal id of the fixture used as the body of any operation.type that results in a PUT or POST.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.operation.source = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.target
+ *该字段的全称为:The id of the fixture used as the target of a PUT or POST, or the id of the fixture used to store the results of a GET
+ *该字段的定义为:The id of the fixture used as the target of any operation.type that results in a PUT or POST, or the id of the fixture used to store the results of a GET.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.operation.target = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.destination
+ *该字段的全称为:Which server to perform the operation on
+ *该字段的定义为:Which server to perform the operation on.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} test.operation.destination = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.parameter
+ *该字段的全称为:Arguments to an operation
+ *该字段的定义为:Arguments to an operation.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} test.operation.parameter = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.responseId
+ *该字段的全称为:Response id
+ *该字段的定义为:The fixture id (maybe new) to map to the response.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} test.operation.responseId = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.test.operation.contentType
+ *该字段的全称为:xml | json
+ *该字段的定义为:The content-type or mime-type to use for RESTful operation.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} test.operation.contentType = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown
+ *该字段的全称为:A series of required clean up steps
+ *该字段的定义为:A series of operations required to clean up after the all the tests are executed (successfully or otherwise).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null, Element} teardown = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} teardown.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} teardown.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} teardown.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation
+ *该字段的全称为:A teardown operation
+ *该字段的定义为:A teardown operation.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} teardown.operation.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} teardown.operation.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} teardown.operation.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.type
+ *该字段的全称为:read | vread | update | delete | history | create | search | transaction | conformance | tags | mailbox | document | assertion | assertion_false | assertion_warning
+ *该字段的定义为:read | vread | update | delete | history | create | search | transaction | conformance | tags | mailbox | document | assertion | assertion_false | assertion_warning.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.source
+ *该字段的全称为:The id of the fixture used as the body in a PUT or POST
+ *该字段的定义为:The internal id of the fixture used as the body of any operation.type that results in a PUT or POST.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} teardown.operation.source = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.target
+ *该字段的全称为:The id of the fixture used as the target of a PUT or POST, or the id of the fixture used to store the results of a GET
+ *该字段的定义为:The id of the fixture used as the target of any operation.type that results in a PUT or POST, or the id of the fixture used to store the results of a GET.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} teardown.operation.target = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.destination
+ *该字段的全称为:Which server to perform the operation on
+ *该字段的定义为:Which server to perform the operation on.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} teardown.operation.destination = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.parameter
+ *该字段的全称为:Arguments to an operation
+ *该字段的定义为:Arguments to an operation.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} teardown.operation.parameter = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.responseId
+ *该字段的全称为:Response id
+ *该字段的定义为:The fixture id (maybe new) to map to the response.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} teardown.operation.responseId = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:TestScript.teardown.operation.contentType
+ *该字段的全称为:xml | json
+ *该字段的定义为:The content-type or mime-type to use for RESTful operation.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} teardown.operation.contentType = null;
+}
+}
+型为:
+ *该字段的路径为:Conformance.rest.resource.searchParam.definition
+ *该字段的全称为:Source of definition for parameter
+ *该字段的定义为:An absolute URI that is a formal reference to where this parameter was first defined, so that a client can be confident of the meaning of the search parameter (a reference to [[[SearchParameter.url]]]).
+ *该字段的描述为:This SHOULD be present, and matches SearchParameter.url.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} rest.resource.searchParam.definition = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.resource.searchParam.type
+ *该字段的全称为:number | date | string | token | reference | composite | quantity | uri
+ *该字段的定义为:The type of value a search parameter refers to, and how the content is interpreted.
+ *该字段的描述为:While this can be looked up from the definition, it is included here as a convenience for systems that auto-generate a query interface based on the server conformance statement.  It SHALL be the same as the type in the search parameter definition.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.resource.searchParam.documentation
+ *该字段的全称为:Server-specific usage
+ *该字段的定义为:This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} rest.resource.searchParam.documentation = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.resource.searchParam.target
+ *该字段的全称为:Types of resource (if a resource reference)
+ *该字段的定义为:Types of resource (if a resource is referenced).
+ *该字段的描述为:This SHALL be the same as or a proper subset of the resources listed in the search parameter definition.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null,  array<code>} rest.resource.searchParam.target = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.resource.searchParam.chain
+ *该字段的全称为:Chained names supported
+ *该字段的定义为:Chained names supported.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} rest.resource.searchParam.chain = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.interaction
+ *该字段的全称为:What operations are supported?
+ *该字段的定义为:A specification of restful operations supported by the system.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} rest.interaction = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.interaction.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} rest.interaction.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.interaction.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} rest.interaction.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.interaction.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} rest.interaction.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.interaction.code
+ *该字段的全称为:transaction | search-system | history-system
+ *该字段的定义为:A coded identifier of the operation, supported by the system.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.interaction.documentation
+ *该字段的全称为:Anything special about operation behavior
+ *该字段的定义为:Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} rest.interaction.documentation = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.operation
+ *该字段的全称为:Definition of an operation or a custom query
+ *该字段的定义为:Definition of an operation or a named query and with its parameters and their meaning and type.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} rest.operation = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.operation.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} rest.operation.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.operation.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} rest.operation.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.operation.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} rest.operation.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.operation.name
+ *该字段的全称为:Name by which the operation/query is invoked
+ *该字段的定义为:The name of a query, which is used in the _query parameter when the query is called.
+ *该字段的描述为:The name here SHOULD be the same as the name in the definition, unless there is a name clash and the name cannot be used.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.operation.definition
+ *该字段的全称为:The defined operation/query
+ *该字段的定义为:Where the formal definition can be found.
+ *该字段的描述为:This can be used to build ah HTML form to invoke the operation, for instance.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.documentMailbox
+ *该字段的全称为:How documents are accepted in /Mailbox
+ *该字段的定义为:A list of absolute URIs that identify profiles that this server implements for accepting documents in the mailbox. If this list is empty, then documents are not accepted. The base specification has the profile identifier "http://hl7.org/fhir/documents/mailbox". Other specifications can declare their own identifier for this purpose.
+ *该字段的描述为:If a server accepts messages on the /Mailbox end-point, it declares this in the messaging elements.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null,  array<uri>} rest.documentMailbox = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.rest.compartment
+ *该字段的全称为:Compartments served/used by system
+ *该字段的定义为:An absolute URI which is a reference to the definition of a compartment hosted by the system.
+ *该字段的描述为:At present, the only defined compartments are at [[extras.html]].
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null,  array<uri>} rest.compartment = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging
+ *该字段的全称为:If messaging is supported
+ *该字段的定义为:A description of the messaging capabilities of the solution.
+ *该字段的描述为:Multiple repetitions allow the documentation of multiple endpoints per solution.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} messaging = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} messaging.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} messaging.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} messaging.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.endpoint
+ *该字段的全称为:Actual endpoint being described
+ *该字段的定义为:An address to which messages and/or replies are to be sent.
+ *该字段的描述为:For solutions that do not use network addresses for routing, it can be just an identifier.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} messaging.endpoint = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.reliableCache
+ *该字段的全称为:Reliable Message Cache Length (min)
+ *该字段的定义为:Length if the receiver's reliable messaging cache in minutes (if a receiver) or how long the cache length on the receiver should be (if a sender).
+ *该字段的描述为:If this value is missing then the application does not implement (receiver) or depend on (sender) reliable messaging.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:unsignedInt
+*/
+ union { null, unsignedInt} messaging.reliableCache = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.documentation
+ *该字段的全称为:Messaging interface behavior details
+ *该字段的定义为:Documentation about the system's messaging capabilities for this endpoint not otherwise documented by the conformance statement.  For example, process for becoming an authorized messaging exchange partner.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} messaging.documentation = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event
+ *该字段的全称为:Declare support for this event
+ *该字段的定义为:A description of the solution's support for an event at this end point.
+ *该字段的描述为:The same event may be listed up to two times - once as sender and once as receiver.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} messaging.event.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} messaging.event.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} messaging.event.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.code
+ *该字段的全称为:Event type
+ *该字段的定义为:A coded identifier of a supported messaging event.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Coding
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.category
+ *该字段的全称为:Consequence | Currency | Notification
+ *该字段的定义为:The impact of the content of the message.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} messaging.event.category = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.mode
+ *该字段的全称为:sender | receiver
+ *该字段的定义为:The mode of this event declaration - whether application is sender or receiver.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.protocol
+ *该字段的全称为:http | ftp | mllp +
+ *该字段的定义为:A list of the messaging transport protocol(s) identifiers, supported by this endpoint.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Coding
+*/
+ union { null,  array<Coding>} messaging.event.protocol = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.focus
+ *该字段的全称为:Resource that's focus of message
+ *该字段的定义为:A resource associated with the event.  This is the resource that defines the event.
+ *该字段的描述为:This SHALL be provided if the event type supports multiple different resource types.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.request
+ *该字段的全称为:Profile that describes the request
+ *该字段的定义为:Information about the request for this event.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.response
+ *该字段的全称为:Profile that describes the response
+ *该字段的定义为:Information about the response for this event.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.messaging.event.documentation
+ *该字段的全称为:Endpoint-specific event documentation
+ *该字段的定义为:Guidance on how this event is handled, such as internal system trigger points, business rules, etc.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} messaging.event.documentation = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.document
+ *该字段的全称为:Document definition
+ *该字段的定义为:A document definition.
+ *该字段的描述为:
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Element
+*/
+ union { null,  array<Element>} document = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.document.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} document.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.document.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} document.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.document.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:*..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} document.modifierExtension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.document.mode
+ *该字段的全称为:producer | consumer
+ *该字段的定义为:Mode of this document declaration - whether application is producer or consumer.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.document.documentation
+ *该字段的全称为:Description of document support
+ *该字段的定义为:A description of how the application supports or uses the specified document profile.  For example, when are documents created, what action is taken with consumed documents, etc.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} document.documentation = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Conformance.document.profile
+ *该字段的全称为:Constraint on a resource used in the document
+ *该字段的定义为:A constraint on a resource used in the document.
+ *该字段的描述为:The first resource is the document resource.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+}
+}

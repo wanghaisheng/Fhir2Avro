@@ -1,0 +1,1207 @@
+/**
+*本文件的更新日期为:2015-06-24T03:16:33.183+00:00
+ *参考资料为: wget http://hl7-fhir.github.io/profiles-resources.json
+*/
+@namespace("org.fhir.messages.Operation")
+protocol Operation {
+
+
+ import idl "datatypes.avdl";
+ import idl "resources.avdl";
+
+
+  ValueSet-expand-Response  ValueSet-expand(ValueSet-expand-Request  request);
+
+  record ValueSet-expand-Request {
+    union { null,ValueSet-expand-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-expand-Response {
+    union { null,ValueSet-expand-Response-Parameters } Parameters	 = null;
+}
+  record ValueSet-expand-Request-Parameters {
+    union { null, ValueSet-expand-Request-Parameters-date} parameter = null;
+
+}
+  record ValueSet-expand-Response-Parameters {
+    ValueSet-expand-Response-Parameters-return parameter;
+}
+  record ValueSet-expand-Request-Parameters-identifier {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-expand-Request-Parameters-valueSet {
+    string name;
+    ValueSet resource;
+}
+  record ValueSet-expand-Request-Parameters-filter {
+    string name;
+    string valueString;
+}
+  record ValueSet-expand-Request-Parameters-profile {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-expand-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record ValueSet-expand-Response-Parameters-return {
+    string name;
+    ValueSet resource;
+}
+  ValueSet-lookup-Response  ValueSet-lookup(ValueSet-lookup-Request  request);
+
+  record ValueSet-lookup-Request {
+    union { null,ValueSet-lookup-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-lookup-Response {
+    union { null,ValueSet-lookup-Response-Parameters } Parameters	 = null;
+}
+  record ValueSet-lookup-Request-Parameters {
+    union { null, ValueSet-lookup-Request-Parameters-date} parameter = null;
+
+}
+  record ValueSet-lookup-Response-Parameters {
+    union { null,  array<ValueSet-lookup-Response-Parameters-designation} parameter = null;
+
+}
+    record  ValueSet-lookup-Response-Parameters-designation {
+    union { null, ValueSet-lookup-Response-Parameters-designation-language} part = null;
+    union { null, ValueSet-lookup-Response-Parameters-designation-use} part = null;
+    ValueSet-lookup-Response-Parameters-designation-value part;
+
+}
+  record ValueSet-expand-Request-Parameters-identifier {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-expand-Request-Parameters-valueSet {
+    string name;
+    ValueSet resource;
+}
+  record ValueSet-expand-Request-Parameters-filter {
+    string name;
+    string valueString;
+}
+  record ValueSet-expand-Request-Parameters-profile {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-expand-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record ValueSet-lookup-Request-Parameters-code {
+    string name;
+    code valueCode;
+}
+  record ValueSet-lookup-Request-Parameters-system {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-lookup-Request-Parameters-version {
+    string name;
+    string valueString;
+}
+  record ValueSet-lookup-Request-Parameters-coding {
+    string name;
+    Coding valueCoding;
+}
+  record ValueSet-lookup-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record ValueSet-lookup-Response-Parameters-designation-value {
+    string name;
+    string valueString;
+
+
+}
+  ValueSet-validate-code-Response  ValueSet-validate-code(ValueSet-validate-code-Request  request);
+
+  record ValueSet-validate-code-Request {
+    union { null,ValueSet-validate-code-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-validate-code-Response {
+    union { null,ValueSet-validate-code-Response-Parameters } Parameters	 = null;
+}
+  record ValueSet-validate-code-Request-Parameters {
+    union { null, ValueSet-validate-code-Request-Parameters-abstract} parameter = null;
+
+}
+  record ValueSet-validate-code-Response-Parameters{
+  record ValueSet-validate-code-Response-Parameters {
+    union { null, ValueSet-validate-code-Response-Parameters-display} parameter = null;
+}
+    record  ValueSet-lookup-Response-Parameters-designation {
+    union { null, ValueSet-lookup-Response-Parameters-designation-language} part = null;
+    union { null, ValueSet-lookup-Response-Parameters-designation-use} part = null;
+    ValueSet-lookup-Response-Parameters-designation-value part;
+
+}
+  record ValueSet-expand-Request-Parameters-identifier {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-expand-Request-Parameters-valueSet {
+    string name;
+    ValueSet resource;
+}
+  record ValueSet-expand-Request-Parameters-filter {
+    string name;
+    string valueString;
+}
+  record ValueSet-expand-Request-Parameters-profile {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-expand-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record ValueSet-lookup-Request-Parameters-code {
+    string name;
+    code valueCode;
+}
+  record ValueSet-lookup-Request-Parameters-system {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-lookup-Request-Parameters-version {
+    string name;
+    string valueString;
+}
+  record ValueSet-lookup-Request-Parameters-coding {
+    string name;
+    Coding valueCoding;
+}
+  record ValueSet-lookup-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record ValueSet-validate-code-Request-Parameters-identifier {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-validate-code-Request-Parameters-valueSet {
+    string name;
+    ValueSet resource;
+}
+  record ValueSet-validate-code-Request-Parameters-code {
+    string name;
+    code valueCode;
+}
+  record ValueSet-validate-code-Request-Parameters-system {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-validate-code-Request-Parameters-version {
+    string name;
+    string valueString;
+}
+  record ValueSet-validate-code-Request-Parameters-display {
+    string name;
+    string valueString;
+}
+  record ValueSet-validate-code-Request-Parameters-coding {
+    string name;
+    Coding valueCoding;
+}
+  record ValueSet-validate-code-Request-Parameters-codeableConcept {
+    string name;
+    CodeableConcept valueCodeableConcept;
+}
+  record ValueSet-validate-code-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record ValueSet-validate-code-Request-Parameters-abstract {
+    string name;
+    boolean valueBoolean;
+}
+  record ValueSet-lookup-Response-Parameters-designation-value {
+    string name;
+    string valueString;
+
+
+}
+  record ValueSet-validate-code-Response-Parameters-result {
+    string name;
+    boolean valueBoolean;
+}
+  record ValueSet-validate-code-Response-Parameters-message {
+    string name;
+    string valueString;
+}
+  record ValueSet-validate-code-Response-Parameters-display {
+    string name;
+    string valueString;
+}
+  ValueSet-batch-Response  ValueSet-batch(ValueSet-batch-Request  request);
+
+  record ValueSet-batch-Request {
+    union { null,ValueSet-batch-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-batch-Response {
+    union { null,ValueSet-batch-Response-Parameters } Parameters	 = null;
+}
+  record ValueSet-batch-Request-Parameters {
+    union { null, ValueSet-batch-Request-Parameters-date} parameter = null;
+
+}
+  record ValueSet-batch-Response-Parameters {
+    union { null,  array<ValueSet-batch-Response-Parameters-item} parameter = null;
+
+}
+    record  ValueSet-batch-Request-Parameters-item {
+    ValueSet-batch-Request-Parameters-item-concept part;
+    ValueSet-batch-Request-Parameters-item-uri part;
+
+}
+    record  ValueSet-batch-Response-Parameters-item {
+    ValueSet-batch-Response-Parameters-item-result part;
+    union { null, ValueSet-batch-Response-Parameters-item-message} part = null;
+    union { null, ValueSet-batch-Response-Parameters-item-display} part = null;
+
+}
+  record ValueSet-batch-Request-Parameters-item-uri {
+    string name;
+    uri valueUri;
+
+
+}
+  record ValueSet-batch-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record ValueSet-batch-Response-Parameters-item-display {
+    string name;
+    string valueString;
+
+
+}
+  Resource-validate-Response  Resource-validate(Resource-validate-Request  request);
+
+  record Resource-validate-Request {
+    union { null,Resource-validate-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-batch-Response {
+    union { null,ValueSet-batch-Response-Parameters } Parameters	 = null;
+}
+  record Resource-validate-Response {
+    union { null,Resource-validate-Response-Parameters } Parameters	 = null;
+}
+  record Resource-validate-Request-Parameters {
+    union { null, Resource-validate-Request-Parameters-profile} parameter = null;
+
+}
+  record Resource-validate-Response-Parameters {
+    Resource-validate-Response-Parameters-return parameter;
+}
+    record  ValueSet-batch-Request-Parameters-item {
+    ValueSet-batch-Request-Parameters-item-concept part;
+    ValueSet-batch-Request-Parameters-item-uri part;
+
+}
+    record  ValueSet-batch-Response-Parameters-item {
+    ValueSet-batch-Response-Parameters-item-result part;
+    union { null, ValueSet-batch-Response-Parameters-item-message} part = null;
+    union { null, ValueSet-batch-Response-Parameters-item-display} part = null;
+
+}
+  record ValueSet-batch-Request-Parameters-item-uri {
+    string name;
+    uri valueUri;
+
+
+}
+  record ValueSet-batch-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record Resource-validate-Request-Parameters-resource {
+    string name;
+    Resource resource;
+}
+  record Resource-validate-Request-Parameters-mode {
+    string name;
+    code valueCode;
+}
+  record Resource-validate-Request-Parameters-profile {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-batch-Response-Parameters-item-display {
+    string name;
+    string valueString;
+
+
+}
+  record Resource-validate-Response-Parameters-return {
+    string name;
+    OperationOutcome resource;
+}
+  Resource-meta-Response  Resource-meta(Resource-meta-Request  request);
+
+  record Resource-validate-Request {
+    union { null,Resource-validate-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-batch-Response {
+    union { null,ValueSet-batch-Response-Parameters } Parameters	 = null;
+}
+  record Resource-validate-Response {
+    union { null,Resource-validate-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-Response {
+    union { null,Resource-meta-Response-Parameters } Parameters	 = null;
+}
+  record Resource-validate-Request-Parameters {
+    union { null, Resource-validate-Request-Parameters-profile} parameter = null;
+
+}
+  record Resource-meta-Response-Parameters {
+    Resource-meta-Response-Parameters-return parameter;
+}
+    record  ValueSet-batch-Request-Parameters-item {
+    ValueSet-batch-Request-Parameters-item-concept part;
+    ValueSet-batch-Request-Parameters-item-uri part;
+
+}
+    record  ValueSet-batch-Response-Parameters-item {
+    ValueSet-batch-Response-Parameters-item-result part;
+    union { null, ValueSet-batch-Response-Parameters-item-message} part = null;
+    union { null, ValueSet-batch-Response-Parameters-item-display} part = null;
+
+}
+  record ValueSet-batch-Request-Parameters-item-uri {
+    string name;
+    uri valueUri;
+
+
+}
+  record ValueSet-batch-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record Resource-validate-Request-Parameters-resource {
+    string name;
+    Resource resource;
+}
+  record Resource-validate-Request-Parameters-mode {
+    string name;
+    code valueCode;
+}
+  record Resource-validate-Request-Parameters-profile {
+    string name;
+    uri valueUri;
+}
+  record ValueSet-batch-Response-Parameters-item-display {
+    string name;
+    string valueString;
+
+
+}
+  record Resource-validate-Response-Parameters-return {
+    string name;
+    OperationOutcome resource;
+}
+  record Resource-meta-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  Resource-meta-add-Response  Resource-meta-add(Resource-meta-add-Request  request);
+
+  record Resource-meta-add-Request {
+    union { null,Resource-meta-add-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-batch-Response {
+    union { null,ValueSet-batch-Response-Parameters } Parameters	 = null;
+}
+  record Resource-validate-Response {
+    union { null,Resource-validate-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-Response {
+    union { null,Resource-meta-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-add-Response {
+    union { null,Resource-meta-add-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-add-Request-Parameters {
+    Resource-meta-add-Request-Parameters-meta parameter;
+
+}
+  record Resource-meta-add-Response-Parameters {
+    Resource-meta-add-Response-Parameters-return parameter;
+}
+    record  ValueSet-batch-Request-Parameters-item {
+    ValueSet-batch-Request-Parameters-item-concept part;
+    ValueSet-batch-Request-Parameters-item-uri part;
+
+}
+    record  ValueSet-batch-Response-Parameters-item {
+    ValueSet-batch-Response-Parameters-item-result part;
+    union { null, ValueSet-batch-Response-Parameters-item-message} part = null;
+    union { null, ValueSet-batch-Response-Parameters-item-display} part = null;
+
+}
+  record ValueSet-batch-Request-Parameters-item-uri {
+    string name;
+    uri valueUri;
+
+
+}
+  record ValueSet-batch-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record Resource-validate-Request-Parameters-resource {
+    string name;
+    Resource resource;
+}
+  record Resource-validate-Request-Parameters-mode {
+    string name;
+    code valueCode;
+}
+  record Resource-validate-Request-Parameters-profile {
+    string name;
+    uri valueUri;
+}
+  record Resource-meta-add-Request-Parameters-meta {
+    string name;
+    Meta resource;
+}
+  record ValueSet-batch-Response-Parameters-item-display {
+    string name;
+    string valueString;
+
+
+}
+  record Resource-validate-Response-Parameters-return {
+    string name;
+    OperationOutcome resource;
+}
+  record Resource-meta-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  record Resource-meta-add-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  Resource-meta-delete-Response  Resource-meta-delete(Resource-meta-delete-Request  request);
+
+  record Resource-meta-delete-Request {
+    union { null,Resource-meta-delete-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-batch-Response {
+    union { null,ValueSet-batch-Response-Parameters } Parameters	 = null;
+}
+  record Resource-validate-Response {
+    union { null,Resource-validate-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-Response {
+    union { null,Resource-meta-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-add-Response {
+    union { null,Resource-meta-add-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-delete-Response {
+    union { null,Resource-meta-delete-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-delete-Request-Parameters {
+    Resource-meta-delete-Request-Parameters-meta parameter;
+
+}
+  record Resource-meta-delete-Response-Parameters {
+    Resource-meta-delete-Response-Parameters-return parameter;
+}
+    record  ValueSet-batch-Request-Parameters-item {
+    ValueSet-batch-Request-Parameters-item-concept part;
+    ValueSet-batch-Request-Parameters-item-uri part;
+
+}
+    record  ValueSet-batch-Response-Parameters-item {
+    ValueSet-batch-Response-Parameters-item-result part;
+    union { null, ValueSet-batch-Response-Parameters-item-message} part = null;
+    union { null, ValueSet-batch-Response-Parameters-item-display} part = null;
+
+}
+  record ValueSet-batch-Request-Parameters-item-uri {
+    string name;
+    uri valueUri;
+
+
+}
+  record ValueSet-batch-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record Resource-validate-Request-Parameters-resource {
+    string name;
+    Resource resource;
+}
+  record Resource-validate-Request-Parameters-mode {
+    string name;
+    code valueCode;
+}
+  record Resource-validate-Request-Parameters-profile {
+    string name;
+    uri valueUri;
+}
+  record Resource-meta-add-Request-Parameters-meta {
+    string name;
+    Meta resource;
+}
+  record Resource-meta-delete-Request-Parameters-meta {
+    string name;
+    Meta resource;
+}
+  record ValueSet-batch-Response-Parameters-item-display {
+    string name;
+    string valueString;
+
+
+}
+  record Resource-validate-Response-Parameters-return {
+    string name;
+    OperationOutcome resource;
+}
+  record Resource-meta-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  record Resource-meta-add-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  record Resource-meta-delete-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  Composition-document-Response  Composition-document(Composition-document-Request  request);
+
+  record Composition-document-Request {
+    union { null,Composition-document-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-batch-Response {
+    union { null,ValueSet-batch-Response-Parameters } Parameters	 = null;
+}
+  record Resource-validate-Response {
+    union { null,Resource-validate-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-Response {
+    union { null,Resource-meta-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-add-Response {
+    union { null,Resource-meta-add-Response-Parameters } Parameters	 = null;
+}
+  record Resource-meta-delete-Response {
+    union { null,Resource-meta-delete-Response-Parameters } Parameters	 = null;
+}
+  record Composition-document-Request-Parameters {
+    union { null, Composition-document-Request-Parameters-pword} parameter = null;
+
+}
+  record Resource-meta-delete-Response-Parameters {
+    Resource-meta-delete-Response-Parameters-return parameter;
+}
+    record  ValueSet-batch-Request-Parameters-item {
+    ValueSet-batch-Request-Parameters-item-concept part;
+    ValueSet-batch-Request-Parameters-item-uri part;
+
+}
+    record  ValueSet-batch-Response-Parameters-item {
+    ValueSet-batch-Response-Parameters-item-result part;
+    union { null, ValueSet-batch-Response-Parameters-item-message} part = null;
+    union { null, ValueSet-batch-Response-Parameters-item-display} part = null;
+
+}
+  record ValueSet-batch-Request-Parameters-item-uri {
+    string name;
+    uri valueUri;
+
+
+}
+  record ValueSet-batch-Request-Parameters-date {
+    string name;
+    dateTime valueDateTime;
+}
+  record Resource-validate-Request-Parameters-resource {
+    string name;
+    Resource resource;
+}
+  record Resource-validate-Request-Parameters-mode {
+    string name;
+    code valueCode;
+}
+  record Resource-validate-Request-Parameters-profile {
+    string name;
+    uri valueUri;
+}
+  record Resource-meta-add-Request-Parameters-meta {
+    string name;
+    Meta resource;
+}
+  record Resource-meta-delete-Request-Parameters-meta {
+    string name;
+    Meta resource;
+}
+  record Composition-document-Request-Parameters-persist {
+    string name;
+    boolean valueBoolean;
+}
+  record Composition-document-Request-Parameters-cert {
+    string name;
+    string valueString;
+}
+  record Composition-document-Request-Parameters-pword {
+    string name;
+    string valueString;
+}
+  record ValueSet-batch-Response-Parameters-item-display {
+    string name;
+    string valueString;
+
+
+}
+  record Resource-validate-Response-Parameters-return {
+    string name;
+    OperationOutcome resource;
+}
+  record Resource-meta-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  record Resource-meta-add-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  record Resource-meta-delete-Response-Parameters-return {
+    string name;
+    Meta resource;
+}
+  ConceptMap-translate-Response  ConceptMap-translate(ConceptMap-translate-Request  request);
+
+  record ConceptMap-translate-Request {
+    union { null,ConceptMap-translate-Request-Parameters } Parameters	 = null;
+}
+  record ConceptMap-translate-Response {
+    union { null,ConceptMap-translate-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-translate-Request-Parameters {
+    union { null,  array<ConceptMap-translate-Request-Parameters-dependency} parameter = null;
+
+}
+  record ConceptMap-translate-Response-Parameters {
+    union { null,  array<ConceptMap-translate-Response-Parameters-match} parameter = null;
+
+}
+    record  ConceptMap-translate-Request-Parameters-dependency {
+    union { null, ConceptMap-translate-Request-Parameters-dependency-element} part = null;
+    union { null, ConceptMap-translate-Request-Parameters-dependency-concept} part = null;
+
+}
+    record  ConceptMap-translate-Response-Parameters-match {
+    union { null, ConceptMap-translate-Response-Parameters-match-equivalence} part = null;
+    union { null, ConceptMap-translate-Response-Parameters-match-concept} part = null;
+    union { null,  array<ConceptMap-translate-Response-Parameters-match-product} part = null;
+
+}
+  record ConceptMap-translate-Request-Parameters-dependency-concept {
+    string name;
+    CodeableConcept valueCodeableConcept;
+
+
+}
+  record ConceptMap-translate-Response-Parameters-match-product {
+    string name;
+     valueundefined;
+
+
+}
+  ConceptMap-batch-translate-Response  ConceptMap-batch-translate(ConceptMap-batch-translate-Request  request);
+
+  record ConceptMap-batch-translate-Request {
+    union { null,ConceptMap-batch-translate-Request-Parameters } Parameters	 = null;
+}
+  record ConceptMap-batch-translate-Response {
+    union { null,ConceptMap-batch-translate-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-batch-translate-Request-Parameters {
+    union { null,  array<ConceptMap-batch-translate-Request-Parameters-item} parameter = null;
+
+}
+  record ConceptMap-batch-translate-Response-Parameters {
+    union { null,  array<ConceptMap-batch-translate-Response-Parameters-item} parameter = null;
+
+}
+    record  ConceptMap-batch-translate-Request-Parameters-item {
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-valueSet} part = null;
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-concept} part = null;
+    ConceptMap-batch-translate-Request-Parameters-item-target part;
+    union { null,  array<ConceptMap-batch-translate-Request-Parameters-item-dependency} part = null;
+
+}
+    record  ConceptMap-batch-translate-Response-Parameters-item {
+    ConceptMap-batch-translate-Response-Parameters-item-result part;
+    union { null, ConceptMap-batch-translate-Response-Parameters-item-message} part = null;
+    union { null,  array<ConceptMap-batch-translate-Response-Parameters-item-match} part = null;
+
+}
+  record ConceptMap-batch-translate-Request-Parameters-item-dependency {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-batch-translate-Response-Parameters-item-match {
+    string name;
+     valueundefined;
+
+
+}
+  ConceptMap-closure-Response  ConceptMap-closure(ConceptMap-closure-Request  request);
+
+  record ConceptMap-closure-Request {
+    union { null,ConceptMap-closure-Request-Parameters } Parameters	 = null;
+}
+  record ConceptMap-batch-translate-Response {
+    union { null,ConceptMap-batch-translate-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-closure-Response {
+    union { null,ConceptMap-closure-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-closure-Request-Parameters {
+    union { null, ConceptMap-closure-Request-Parameters-version} parameter = null;
+
+}
+  record ConceptMap-closure-Response-Parameters {
+    ConceptMap-closure-Response-Parameters-return parameter;
+}
+    record  ConceptMap-batch-translate-Request-Parameters-item {
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-valueSet} part = null;
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-concept} part = null;
+    ConceptMap-batch-translate-Request-Parameters-item-target part;
+    union { null,  array<ConceptMap-batch-translate-Request-Parameters-item-dependency} part = null;
+
+}
+    record  ConceptMap-batch-translate-Response-Parameters-item {
+    ConceptMap-batch-translate-Response-Parameters-item-result part;
+    union { null, ConceptMap-batch-translate-Response-Parameters-item-message} part = null;
+    union { null,  array<ConceptMap-batch-translate-Response-Parameters-item-match} part = null;
+
+}
+  record ConceptMap-batch-translate-Request-Parameters-item-dependency {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Request-Parameters-name {
+    string name;
+    string valueString;
+}
+  record ConceptMap-closure-Request-Parameters-concept {
+    string name;
+    Coding valueCoding;
+}
+  record ConceptMap-closure-Request-Parameters-version {
+    string name;
+    id valueId;
+}
+  record ConceptMap-batch-translate-Response-Parameters-item-match {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Response-Parameters-return {
+    string name;
+    ConceptMap resource;
+}
+  Encounter-everything-Response  Encounter-everything(Encounter-everything-Request  request);
+
+  record ConceptMap-closure-Request {
+    union { null,ConceptMap-closure-Request-Parameters } Parameters	 = null;
+}
+  record ConceptMap-batch-translate-Response {
+    union { null,ConceptMap-batch-translate-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-closure-Response {
+    union { null,ConceptMap-closure-Response-Parameters } Parameters	 = null;
+}
+  record Encounter-everything-Response {
+    union { null,Encounter-everything-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-closure-Request-Parameters {
+    union { null, ConceptMap-closure-Request-Parameters-version} parameter = null;
+
+}
+  record Encounter-everything-Response-Parameters {
+    Encounter-everything-Response-Parameters-return parameter;
+}
+    record  ConceptMap-batch-translate-Request-Parameters-item {
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-valueSet} part = null;
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-concept} part = null;
+    ConceptMap-batch-translate-Request-Parameters-item-target part;
+    union { null,  array<ConceptMap-batch-translate-Request-Parameters-item-dependency} part = null;
+
+}
+    record  ConceptMap-batch-translate-Response-Parameters-item {
+    ConceptMap-batch-translate-Response-Parameters-item-result part;
+    union { null, ConceptMap-batch-translate-Response-Parameters-item-message} part = null;
+    union { null,  array<ConceptMap-batch-translate-Response-Parameters-item-match} part = null;
+
+}
+  record ConceptMap-batch-translate-Request-Parameters-item-dependency {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Request-Parameters-name {
+    string name;
+    string valueString;
+}
+  record ConceptMap-closure-Request-Parameters-concept {
+    string name;
+    Coding valueCoding;
+}
+  record ConceptMap-closure-Request-Parameters-version {
+    string name;
+    id valueId;
+}
+  record ConceptMap-batch-translate-Response-Parameters-item-match {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Response-Parameters-return {
+    string name;
+    ConceptMap resource;
+}
+  record Encounter-everything-Response-Parameters-return {
+    string name;
+    Bundle resource;
+}
+  Patient-everything-Response  Patient-everything(Patient-everything-Request  request);
+
+  record Patient-everything-Request {
+    union { null,Patient-everything-Request-Parameters } Parameters	 = null;
+}
+  record ConceptMap-batch-translate-Response {
+    union { null,ConceptMap-batch-translate-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-closure-Response {
+    union { null,ConceptMap-closure-Response-Parameters } Parameters	 = null;
+}
+  record Encounter-everything-Response {
+    union { null,Encounter-everything-Response-Parameters } Parameters	 = null;
+}
+  record Patient-everything-Response {
+    union { null,Patient-everything-Response-Parameters } Parameters	 = null;
+}
+  record Patient-everything-Request-Parameters {
+    union { null, Patient-everything-Request-Parameters-end} parameter = null;
+
+}
+  record Patient-everything-Response-Parameters {
+    Patient-everything-Response-Parameters-return parameter;
+}
+    record  ConceptMap-batch-translate-Request-Parameters-item {
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-valueSet} part = null;
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-concept} part = null;
+    ConceptMap-batch-translate-Request-Parameters-item-target part;
+    union { null,  array<ConceptMap-batch-translate-Request-Parameters-item-dependency} part = null;
+
+}
+    record  ConceptMap-batch-translate-Response-Parameters-item {
+    ConceptMap-batch-translate-Response-Parameters-item-result part;
+    union { null, ConceptMap-batch-translate-Response-Parameters-item-message} part = null;
+    union { null,  array<ConceptMap-batch-translate-Response-Parameters-item-match} part = null;
+
+}
+  record ConceptMap-batch-translate-Request-Parameters-item-dependency {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Request-Parameters-name {
+    string name;
+    string valueString;
+}
+  record ConceptMap-closure-Request-Parameters-concept {
+    string name;
+    Coding valueCoding;
+}
+  record ConceptMap-closure-Request-Parameters-version {
+    string name;
+    id valueId;
+}
+  record Patient-everything-Request-Parameters-start {
+    string name;
+    date valueDate;
+}
+  record Patient-everything-Request-Parameters-end {
+    string name;
+    date valueDate;
+}
+  record ConceptMap-batch-translate-Response-Parameters-item-match {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Response-Parameters-return {
+    string name;
+    ConceptMap resource;
+}
+  record Encounter-everything-Response-Parameters-return {
+    string name;
+    Bundle resource;
+}
+  record Patient-everything-Response-Parameters-return {
+    string name;
+    Bundle resource;
+}
+  Questionnaire-populate-Response  Questionnaire-populate(Questionnaire-populate-Request  request);
+
+  record Questionnaire-populate-Request {
+    union { null,Questionnaire-populate-Request-Parameters } Parameters	 = null;
+}
+  record ConceptMap-batch-translate-Response {
+    union { null,ConceptMap-batch-translate-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-closure-Response {
+    union { null,ConceptMap-closure-Response-Parameters } Parameters	 = null;
+}
+  record Encounter-everything-Response {
+    union { null,Encounter-everything-Response-Parameters } Parameters	 = null;
+}
+  record Patient-everything-Response {
+    union { null,Patient-everything-Response-Parameters } Parameters	 = null;
+}
+  record Questionnaire-populate-Response {
+    union { null,Questionnaire-populate-Response-Parameters } Parameters	 = null;
+}
+  record Questionnaire-populate-Request-Parameters {
+    union { null, Questionnaire-populate-Request-Parameters-local} parameter = null;
+
+}
+  record Questionnaire-populate-Response-Parameters {
+    Questionnaire-populate-Response-Parameters-return parameter;
+}
+    record  ConceptMap-batch-translate-Request-Parameters-item {
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-valueSet} part = null;
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-concept} part = null;
+    ConceptMap-batch-translate-Request-Parameters-item-target part;
+    union { null,  array<ConceptMap-batch-translate-Request-Parameters-item-dependency} part = null;
+
+}
+    record  ConceptMap-batch-translate-Response-Parameters-item {
+    ConceptMap-batch-translate-Response-Parameters-item-result part;
+    union { null, ConceptMap-batch-translate-Response-Parameters-item-message} part = null;
+    union { null,  array<ConceptMap-batch-translate-Response-Parameters-item-match} part = null;
+
+}
+  record ConceptMap-batch-translate-Request-Parameters-item-dependency {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Request-Parameters-name {
+    string name;
+    string valueString;
+}
+  record ConceptMap-closure-Request-Parameters-concept {
+    string name;
+    Coding valueCoding;
+}
+  record ConceptMap-closure-Request-Parameters-version {
+    string name;
+    id valueId;
+}
+  record Patient-everything-Request-Parameters-start {
+    string name;
+    date valueDate;
+}
+  record Patient-everything-Request-Parameters-end {
+    string name;
+    date valueDate;
+}
+  record Questionnaire-populate-Request-Parameters-identifier {
+    string name;
+    uri valueUri;
+}
+  record Questionnaire-populate-Request-Parameters-questionnaire {
+    string name;
+    Questionnaire resource;
+}
+  record Questionnaire-populate-Request-Parameters-subject {
+    string name;
+    Any valueAny;
+}
+  record Questionnaire-populate-Request-Parameters-content {
+    string name;
+    string valueString;
+}
+  record Questionnaire-populate-Request-Parameters-local {
+    string name;
+    boolean valueBoolean;
+}
+  record ConceptMap-batch-translate-Response-Parameters-item-match {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Response-Parameters-return {
+    string name;
+    ConceptMap resource;
+}
+  record Encounter-everything-Response-Parameters-return {
+    string name;
+    Bundle resource;
+}
+  record Patient-everything-Response-Parameters-return {
+    string name;
+    Bundle resource;
+}
+  record Questionnaire-populate-Response-Parameters-return {
+    string name;
+    QuestionnaireAnswers resource;
+}
+  StructureDefinition-questionnaire-Response  StructureDefinition-questionnaire(StructureDefinition-questionnaire-Request  request);
+
+  record StructureDefinition-questionnaire-Request {
+    union { null,StructureDefinition-questionnaire-Request-Parameters } Parameters	 = null;
+}
+  record ConceptMap-batch-translate-Response {
+    union { null,ConceptMap-batch-translate-Response-Parameters } Parameters	 = null;
+}
+  record ConceptMap-closure-Response {
+    union { null,ConceptMap-closure-Response-Parameters } Parameters	 = null;
+}
+  record Encounter-everything-Response {
+    union { null,Encounter-everything-Response-Parameters } Parameters	 = null;
+}
+  record Patient-everything-Response {
+    union { null,Patient-everything-Response-Parameters } Parameters	 = null;
+}
+  record Questionnaire-populate-Response {
+    union { null,Questionnaire-populate-Response-Parameters } Parameters	 = null;
+}
+  record StructureDefinition-questionnaire-Response {
+    union { null,StructureDefinition-questionnaire-Response-Parameters } Parameters	 = null;
+}
+  record StructureDefinition-questionnaire-Request-Parameters {
+    union { null, StructureDefinition-questionnaire-Request-Parameters-supportedOnly} parameter = null;
+
+}
+  record StructureDefinition-questionnaire-Response-Parameters {
+    StructureDefinition-questionnaire-Response-Parameters-return parameter;
+}
+    record  ConceptMap-batch-translate-Request-Parameters-item {
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-valueSet} part = null;
+    union { null, ConceptMap-batch-translate-Request-Parameters-item-concept} part = null;
+    ConceptMap-batch-translate-Request-Parameters-item-target part;
+    union { null,  array<ConceptMap-batch-translate-Request-Parameters-item-dependency} part = null;
+
+}
+    record  ConceptMap-batch-translate-Response-Parameters-item {
+    ConceptMap-batch-translate-Response-Parameters-item-result part;
+    union { null, ConceptMap-batch-translate-Response-Parameters-item-message} part = null;
+    union { null,  array<ConceptMap-batch-translate-Response-Parameters-item-match} part = null;
+
+}
+  record ConceptMap-batch-translate-Request-Parameters-item-dependency {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Request-Parameters-name {
+    string name;
+    string valueString;
+}
+  record ConceptMap-closure-Request-Parameters-concept {
+    string name;
+    Coding valueCoding;
+}
+  record ConceptMap-closure-Request-Parameters-version {
+    string name;
+    id valueId;
+}
+  record Patient-everything-Request-Parameters-start {
+    string name;
+    date valueDate;
+}
+  record Patient-everything-Request-Parameters-end {
+    string name;
+    date valueDate;
+}
+  record Questionnaire-populate-Request-Parameters-identifier {
+    string name;
+    uri valueUri;
+}
+  record Questionnaire-populate-Request-Parameters-questionnaire {
+    string name;
+    Questionnaire resource;
+}
+  record Questionnaire-populate-Request-Parameters-subject {
+    string name;
+    Any valueAny;
+}
+  record Questionnaire-populate-Request-Parameters-content {
+    string name;
+    string valueString;
+}
+  record Questionnaire-populate-Request-Parameters-local {
+    string name;
+    boolean valueBoolean;
+}
+  record StructureDefinition-questionnaire-Request-Parameters-identifier {
+    string name;
+    uri valueUri;
+}
+  record StructureDefinition-questionnaire-Request-Parameters-profile {
+    string name;
+    token valueToken;
+}
+  record StructureDefinition-questionnaire-Request-Parameters-url {
+    string name;
+    uri valueUri;
+}
+  record StructureDefinition-questionnaire-Request-Parameters-supportedOnly {
+    string name;
+    boolean valueBoolean;
+}
+  record ConceptMap-batch-translate-Response-Parameters-item-match {
+    string name;
+     valueundefined;
+
+
+}
+  record ConceptMap-closure-Response-Parameters-return {
+    string name;
+    ConceptMap resource;
+}
+  record Encounter-everything-Response-Parameters-return {
+    string name;
+    Bundle resource;
+}
+  record Patient-everything-Response-Parameters-return {
+    string name;
+    Bundle resource;
+}
+  record Questionnaire-populate-Response-Parameters-return {
+    string name;
+    QuestionnaireAnswers resource;
+}
+  record StructureDefinition-questionnaire-Response-Parameters-return {
+    string name;
+    Questionnaire resource;
+}

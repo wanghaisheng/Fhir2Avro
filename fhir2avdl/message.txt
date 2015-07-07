@@ -1,0 +1,117 @@
+以上程序使用fs.readFileSync从源路径读取文件内容，并使用fs.writeFileSync将文件内容写入目标路径。
+/**
+*本文件的更新日期为:2015-06-24T03:16:33.183+00:00
+ *参考资料为: wget http://hl7-fhir.github.io/profiles-resources.json
+*/
+@namespace("org.fhir.messages.Operation")
+
+
+protocol Operation {
+
+
+
+
+ import idl "datatypes.avdl";
+
+
+
+ import idl "resources.avdl";
+
+
+
+/****************  /ValueSet/{id}/$expand  *******************/
+/**
+The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. \n\n
+If the operation is not called at the instance level, one of the in parameters identifier or valueset must be provided.\n\n
+An expanded value set will be returned, or an OperationOutcome with an error message",
+
+The value set expansion returned by this query should be treated as a transient result that will change over time
+  (whether it does or not depends on how the value set is specified), so applications should repeat the operation each time the
+  value set is used. \n\nDifferent servers may return different results from expanding a value set for the following reasons:\n\n
+  *  The underlying code systems are different (e.g. different versions, possibly with different defined behaviour)\n
+  * The server optimises filter includes differently, such as sorting by code frequency\n* Servers introduce arbitrary groups to
+  assist a user to navigate the lists based either on extensions in the definition, or additional knowledge available to the server",
+
+*/
+ValueSet-expand-Response ValueSet-expand(
+  /**
+  */
+  ValueSet-expand-Request request) ;
+
+
+
+  record ValueSet-expand-Request {
+union { null,ValueSet-expand-Request-Parameters } Parameters	 = null;
+}
+  record ValueSet-expand-Response {
+union { null,ValueSet-expand-Response-Parameters } Parameters	 = null;
+}
+  record ValueSet-expand-Request-Parameters{
+  union { null,ValueSet-expand-Request-Parameters-identifier } parameter	 = null;
+union { null,ValueSet-expand-Request-Parameters-valueSet } parameter	 = null;
+union { null,ValueSet-expand-Request-Parameters-filter } parameter	 = null;
+union { null,ValueSet-expand-Request-Parameters-profile } parameter	 = null;
+union { null,ValueSet-expand-Request-Parameters-dateTime } parameter	 = null;
+
+}
+record ValueSet-expand-Request-Parameters-identifier{
+ String name;
+ Identifier valueIdentifier;
+ }
+record ValueSet-expand-Request-Parameters-valueSet{
+ String name;
+ ValueSet resource;
+ }
+
+record ValueSet-expand-Request-Parameters-filter{
+ String name;
+ String valueString;
+ }
+record ValueSet-expand-Request-Parameters-profile{
+ String name;
+ Uri valueUri;
+ }
+ record ValueSet-expand-Request-Parameters-dateTime{
+  String name;
+  DateTime valueDateTime;
+  }
+
+ record ValueSet-expand-Response-Parameters{
+ValueSet ValueSet;
+}
+
+
+
+ValueSet-batch-Response ValueSet-batch(
+  /**
+  */
+  ValueSet-batch-Request request) ;
+
+
+
+    record ValueSet-batch-Request {
+        union { null,ValueSet-batch-Request-Parameters } Parameters	 = null;
+}
+    record ValueSet-batch-Response {
+        union { null,ValueSet-batch-Response-Parameters } Parameters	 = null;
+}
+    record ValueSet-batch-Request-Parameters{
+        union { null,array<ValueSet-batch-Request-Parameters-item> } parameter	 = null;
+        union { null,ValueSet-batch-Request-Parameters-date } parameter	 = null;
+
+
+}
+    record ValueSet-expand-Request-Parameters-item{
+        string name;
+        union { null,array<ValueSet-batch-Request-Parameters-item-concept> } part	 = null;
+        union { null,array<ValueSet-batch-Request-Parameters-item-uri> } part	 = null;
+ }
+    record ValueSet-batch-Request-Parameters-item-concept{
+        string name;
+        CodeableConcept valueCodeableConcept;
+ }
+
+    record ValueSet-batch-Request-Parameters-item-uri{
+        string name;
+        uri valueUri;
+ }

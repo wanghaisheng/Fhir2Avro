@@ -1,0 +1,3304 @@
+/**
+ *本文件的更新日期为:2015-06-24T03:16:33.183+00:00
+ *参考资料为: wget http://hl7-fhir.github.io/profiles-types.json
+*/
+@namespace("org.fhir.messages.datatypes")
+protocol Datatype {
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:integer
+ *该数据类型的全称为:Primitive Type integer
+ *该数据类型的定义为:A whole number
+ *该数据类型的描述为:32 bit number; for values larger than this, use decimal
+*/
+  record integer {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:integer.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:integer.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:integer.value
+ *该字段的全称为:Primitive value for integer
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:int
+*/
+ union { null, xs:int} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:dateTime
+ *该数据类型的全称为:Primitive Type dateTime
+ *该数据类型的定义为:A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored.  Dates SHALL be valid dates.
+ *该数据类型的描述为:
+*/
+  record dateTime {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:dateTime.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:dateTime.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:dateTime.value
+ *该字段的全称为:Primitive value for dateTime
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime
+*/
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:unsignedInt
+ *该数据类型的全称为:Primitive Type unsignedInt
+ *该数据类型的定义为:An integer with a value that is not negative (e.g. >= 0)
+ *该数据类型的描述为:
+*/
+  record unsignedInt {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:unsignedInt.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:value
+ *该字段的全称为:Primitive value for unsignedInt
+ *该字段的定义为:Primitive value for unsignedInt
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:integer
+*/
+ union { null, xs:integer} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:code
+ *该数据类型的全称为:Primitive Type code
+ *该数据类型的定义为:A string which has at least one character and no leading or trailing whitespace and where there is no whitespace other than single spaces in the contents
+ *该数据类型的描述为:
+*/
+  record code {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:code.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:value
+ *该字段的全称为:Primitive value for code
+ *该字段的定义为:Primitive value for code
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:string
+*/
+ union { null, xs:string} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:date
+ *该数据类型的全称为:Primitive Type date
+ *该数据类型的定义为:A date, or partial date (e.g. just year or year + month). There is no time zone. The format is a union of the schema types gYear, gYearMonth and date.  Dates SHALL be valid dates.
+ *该数据类型的描述为:
+*/
+  record date {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:date.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:date.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:date.value
+ *该字段的全称为:Primitive value for date
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:xs:gYear, xs:gYearMonth, xs:date
+*/
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:decimal
+ *该数据类型的全称为:Primitive Type decimal
+ *该数据类型的定义为:A rational number with implicit precision
+ *该数据类型的描述为:Do not use a IEEE type floating point type, instead use something that works like a true decimal, with inbuilt precision (e.g. Java BigInteger)
+*/
+  record decimal {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:decimal.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:decimal.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:decimal.value
+ *该字段的全称为:Primitive value for decimal
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:decimal
+*/
+ union { null, xs:decimal} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:uri
+ *该数据类型的全称为:Primitive Type uri
+ *该数据类型的定义为:String of characters used to identify a name or a resource
+ *该数据类型的描述为:see http://en.wikipedia.org/wiki/Uniform_resource_identifier
+*/
+  record uri {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:uri.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:uri.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:uri.value
+ *该字段的全称为:Primitive value for uri
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:anyURI
+*/
+ union { null, xs:anyURI} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:id
+ *该数据类型的全称为:Primitive Type id
+ *该数据类型的定义为:Any combination of lowercase letters, numerals, "-" and ".", with a length limit of 36 characters.  (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that meets these constraints.)  Systems SHALL send ids as lower-case but SHOULD interpret them case-insensitively.
+ *该数据类型的描述为:RFC 4122
+*/
+  record id {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:id.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:value
+ *该字段的全称为:Primitive value for id
+ *该字段的定义为:Primitive value for id
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:string
+*/
+ union { null, xs:string} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:base64Binary
+ *该数据类型的全称为:Primitive Type base64Binary
+ *该数据类型的定义为:A stream of bytes
+ *该数据类型的描述为:A stream of bytes, base64 encoded
+*/
+  record base64Binary {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:base64Binary.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:base64Binary.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:base64Binary.value
+ *该字段的全称为:Primitive value for base64Binary
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:base64Binary
+*/
+ union { null, xs:base64Binary} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:time
+ *该数据类型的全称为:Primitive Type time
+ *该数据类型的定义为:A time during the day, with no date specified
+ *该数据类型的描述为:
+*/
+  record time {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:time.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:time.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:time.value
+ *该字段的全称为:Primitive value for time
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:time
+*/
+ union { null, xs:time} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:oid
+ *该数据类型的全称为:Primitive Type oid
+ *该数据类型的定义为:An oid represented as a URI
+ *该数据类型的描述为:RFC 3001. See also ISO/IEC 8824:1990 €
+*/
+  record oid {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:oid.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:value
+ *该字段的全称为:Primitive value for oid
+ *该字段的定义为:Primitive value for oid
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:uri
+*/
+ union { null, xs:uri} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:positiveInt
+ *该数据类型的全称为:Primitive Type positiveInt
+ *该数据类型的定义为:An integer with a value that is positive (e.g. >0)
+ *该数据类型的描述为:
+*/
+  record positiveInt {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:positiveInt.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:value
+ *该字段的全称为:Primitive value for positiveInt
+ *该字段的定义为:Primitive value for positiveInt
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:integer
+*/
+ union { null, xs:integer} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:string
+ *该数据类型的全称为:Primitive Type string
+ *该数据类型的定义为:A sequence of Unicode characters
+ *该数据类型的描述为:Note that FHIR strings may not exceed 1MB in size
+*/
+  record string {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:string.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:string.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:string.value
+ *该字段的全称为:Primitive value for string
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:string
+*/
+ union { null, xs:string} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:boolean
+ *该数据类型的全称为:Primitive Type boolean
+ *该数据类型的定义为:Value of "true" or "false"
+ *该数据类型的描述为:
+*/
+  record boolean {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:boolean.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:boolean.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:boolean.value
+ *该字段的全称为:Primitive value for boolean
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:boolean
+*/
+ union { null, xs:boolean} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:uuid
+ *该数据类型的全称为:Primitive Type uuid
+ *该数据类型的定义为:A UUID, represented as a URI
+ *该数据类型的描述为:See The Open Group, CDE 1.1 Remote Procedure Call specification, Appendix A.
+*/
+  record uuid {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:uuid.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:value
+ *该字段的全称为:Primitive value for uuid
+ *该字段的定义为:Primitive value for uuid
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:uri
+*/
+ union { null, xs:uri} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:instant
+ *该数据类型的全称为:Primitive Type instant
+ *该数据类型的定义为:An instant in time - known at least to the second
+ *该数据类型的描述为:Note: For system observed times, not human-reported times (see date and dateTime below). Time zone is always required
+*/
+  record instant {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:instant.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references)
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:instant.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:instant.value
+ *该字段的全称为:Primitive value for instant
+ *该字段的定义为:The actual value
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xs:dateTime
+*/
+ union { null, xs:dateTime} value = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Period
+ *该数据类型的全称为:Time range defined by start and end date/time
+ *该数据类型的定义为:A time period defined by a start and end date and optionally time.
+ *该数据类型的描述为:This is not a duration - that's a measure of time (a separate type), but a duration that occurs at a fixed value of time. A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. "the patient was an inpatient of the hospital for this time range") or one value from the range applies (e.g. "give to the patient between these two times"). If a duration might be required, specify the type as Interval|Duration.
+*/
+  record Period {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Period.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Period.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Period.start
+ *该字段的全称为:Starting time with inclusive boundary
+ *该字段的定义为:The start of the period. The boundary is inclusive.
+ *该字段的描述为:If the low element is missing, the meaning is that the low boundary is not known.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:dateTime
+*/
+ union { null, dateTime} start = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Period.end
+ *该字段的全称为:End time with inclusive boundary, if not ongoing
+ *该字段的定义为:The end of the period. If the end of the period is missing, it means that the period is ongoing.
+ *该字段的描述为:The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has a end value of 2012-02-03.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:dateTime
+*/
+ union { null, dateTime} end = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Coding
+ *该数据类型的全称为:A reference to a code defined by a terminology system
+ *该数据类型的定义为:A reference to a code defined by a terminology system.
+ *该数据类型的描述为:Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the V3 Core Principles for more information.
+*/
+  record Coding {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Coding.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Coding.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Coding.system
+ *该字段的全称为:Identity of the terminology system
+ *该字段的定义为:The identification of the code system that defines the meaning of the symbol in the code.
+ *该字段的描述为:The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Coding.version
+ *该字段的全称为:Version of the system - if relevant
+ *该字段的定义为:The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.
+ *该字段的描述为:Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} version = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Coding.code
+ *该字段的全称为:Symbol in syntax defined by the system
+ *该字段的定义为:A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} code = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Coding.display
+ *该字段的全称为:Representation defined by the system
+ *该字段的定义为:A representation of the meaning of the code in the system, following the rules of the system.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} display = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Coding.userSelected
+ *该字段的全称为:If this coding was chosen directly by the user
+ *该字段的定义为:Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).
+ *该字段的描述为:Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and it's consequences more completely.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:boolean
+*/
+ union { null, boolean} userSelected = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Range
+ *该数据类型的全称为:Set of values bounded by low and high
+ *该数据类型的定义为:A set of ordered Quantities defined by a low and high limit.
+ *该数据类型的描述为:The stated low and high value are assumed to have arbitrarily high precision when it comes to determining which values are in the range. I.e. 1.99 is not in the range 2 -> 3.
+*/
+  record Range {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Range.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Range.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Range.low
+ *该字段的全称为:Low limit
+ *该字段的定义为:The low limit. The boundary is inclusive.
+ *该字段的描述为:If the low element is missing, the low boundary is not known.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Quantity
+*/
+ union { null, Quantity} low = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Range.high
+ *该字段的全称为:High limit
+ *该字段的定义为:The high limit. The boundary is inclusive.
+ *该字段的描述为:If the high element is missing, the high boundary is not known.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Quantity
+*/
+ union { null, Quantity} high = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Quantity
+ *该数据类型的全称为:A measured or measurable amount
+ *该数据类型的定义为:A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
+ *该数据类型的描述为:The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.
+*/
+  record Quantity {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.value
+ *该字段的全称为:Numerical value (with implicit precision)
+ *该字段的定义为:The value of the measured amount. The value includes an implicit precision in the presentation of the value.
+ *该字段的描述为:The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} value = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.comparator
+ *该字段的全称为:< | <= | >= | > - how to understand the value
+ *该字段的定义为:How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues. E.g. if the comparator is "<" , then the real value is < stated value.
+ *该字段的描述为:This is labeled as "Is Modifier" because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} comparator = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.units
+ *该字段的全称为:Unit representation
+ *该字段的定义为:A human-readable form of the units.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} units = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.system
+ *该字段的全称为:System that defines coded unit form
+ *该字段的定义为:The identification of the system that provides the coded form of the unit.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.code
+ *该字段的全称为:Coded form of the unit
+ *该字段的定义为:A computer processable form of the units in some unit representation system.
+ *该字段的描述为:The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.
+
+The context of use may additionally require a code from a particular system.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} code = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Attachment
+ *该数据类型的全称为:Content in a format defined elsewhere
+ *该数据类型的定义为:For referring to data content defined in other formats.
+ *该数据类型的描述为:When providing a summary view (for example with Observation.value[x]) Attachment should be represented with a brief display text such as "Attachment".
+*/
+  record Attachment {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.contentType
+ *该字段的全称为:Mime type of the content, with charset etc.
+ *该字段的定义为:Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} contentType = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.language
+ *该字段的全称为:Human language of the content (BCP-47)
+ *该字段的定义为:The human language of the content. The value can be any valid value according to BCP 47.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} language = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.data
+ *该字段的全称为:Data inline, base64ed
+ *该字段的定义为:The actual data of the attachment - a sequence of bytes. In XML, represented using base64.
+ *该字段的描述为:The base64-encoded data SHALL be expressed in the same character set as the base resource XML or JSON.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:base64Binary
+*/
+ union { null, base64Binary} data = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.url
+ *该字段的全称为:Uri where the data can be found
+ *该字段的定义为:An alternative location where the data can be accessed.
+ *该字段的描述为:If both data and url are provided, the url SHALL point to the same content as the data contains. Urls may be relative references or may reference transient locations such as a wrapping envelope using cid: though this has ramifications for using signatures. Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself. If a URL is provided, it SHALL resolve to actual data.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} url = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.size
+ *该字段的全称为:Number of bytes of content (if url provided)
+ *该字段的定义为:The number of bytes of data that make up this attachment.
+ *该字段的描述为:The number of bytes is redundant if the data is provided as a base64binary, but is useful if the data is provided as a url reference.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:unsignedInt
+*/
+ union { null, unsignedInt} size = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.hash
+ *该字段的全称为:Hash of the data (sha-1, base64ed )
+ *该字段的定义为:The calculated hash of the data using SHA-1. Represented using base64.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:base64Binary
+*/
+ union { null, base64Binary} hash = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.title
+ *该字段的全称为:Label to display in place of the data
+ *该字段的定义为:A label or set of text to display in place of the data.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} title = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Attachment.creation
+ *该字段的全称为:Date attachment was first created
+ *该字段的定义为:The date that the attachment was first created.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:dateTime
+*/
+ union { null, dateTime} creation = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Ratio
+ *该数据类型的全称为:A ratio of two Quantity values - a numerator and a denominator
+ *该数据类型的定义为:A relationship of two Quantity values - expressed as a numerator and a denominator.
+ *该数据类型的描述为:
+*/
+  record Ratio {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Ratio.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Ratio.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Ratio.numerator
+ *该字段的全称为:Numerator value
+ *该字段的定义为:The value of the numerator.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Quantity
+*/
+ union { null, Quantity} numerator = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Ratio.denominator
+ *该字段的全称为:Denominator value
+ *该字段的定义为:The value of the denominator.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Quantity
+*/
+ union { null, Quantity} denominator = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:SampledData
+ *该数据类型的全称为:A series of measurements taken by a device
+ *该数据类型的定义为:A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
+ *该数据类型的描述为:The data is not interpretable without at least origin, period, and dimensions, but these are optional to allow a separation between the template of measurement and the actual measurement, such as between DeviceCapabilities and DeviceLog.  When providing a summary view (for example with Observation.value[x]) SampledData should be represented with a brief display text such as "Sampled Data".
+*/
+  record SampledData {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.origin
+ *该字段的全称为:Zero value and units
+ *该字段的定义为:The base quantity that a measured value of zero represents. In addition, this provides the units of the entire measurement series.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Quantity
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.period
+ *该字段的全称为:Number of milliseconds between samples
+ *该字段的定义为:The length of time between sampling times, measured in milliseconds.
+ *该字段的描述为:This is usually a whole number.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.factor
+ *该字段的全称为:Multiply data by this before adding to origin
+ *该字段的定义为:A correction factor that is applied to the sampled data points before they are added to the origin.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} factor = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.lowerLimit
+ *该字段的全称为:Lower limit of detection
+ *该字段的定义为:The lower limit of detection of the measured points. This is needed if any of the data points have the value "L" (lower than detection limit).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} lowerLimit = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.upperLimit
+ *该字段的全称为:Upper limit of detection
+ *该字段的定义为:The upper limit of detection of the measured points. This is needed if any of the data points have the value "U" (higher than detection limit).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} upperLimit = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.dimensions
+ *该字段的全称为:Number of sample points at each time point
+ *该字段的定义为:The number of sample points at each time point. If this value is greater than one, then the dimensions will be interlaced - all the sample points for a point in time will be recorded at once.
+ *该字段的描述为:If there is more than one dimension, the code for the type of data will define the meaning of the dimensions (typically ECG data).
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:positiveInt
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:SampledData.data
+ *该字段的全称为:Decimal values with spaces, or "E" | "U" | "L"
+ *该字段的定义为:A series of data points which are decimal values separated by a single space (character u20). The special values "E" (error), "L" (below detection limit) and "U" (above detection limit) can also be used in place of a decimal value.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Reference
+ *该数据类型的全称为:A reference from one resource to another
+ *该数据类型的定义为:A reference from one resource to another.
+ *该数据类型的描述为:
+*/
+  record Reference {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Reference.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Reference.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Reference.reference
+ *该字段的全称为:Relative, internal or absolute URL reference
+ *该字段的定义为:A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.
+ *该字段的描述为:Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries. 
+
+Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the url conforms to the structure "/[type]/[id]" then it should be assumed that the reference is to a FHIR RESTful server.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} reference = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Reference.display
+ *该字段的全称为:Text alternative for the resource
+ *该字段的定义为:Plain text narrative that identifies the resource in addition to the resource reference.
+ *该字段的描述为:This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} display = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:CodeableConcept
+ *该数据类型的全称为:Concept - reference to a terminology or just  text
+ *该数据类型的定义为:A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
+ *该数据类型的描述为:Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.
+*/
+  record CodeableConcept {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:CodeableConcept.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:CodeableConcept.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:CodeableConcept.coding
+ *该字段的全称为:Code defined by a terminology system
+ *该字段的定义为:A reference to a code defined by a terminology system.
+ *该字段的描述为:Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the V3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Coding
+*/
+ union { null,  array<Coding>} coding = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:CodeableConcept.text
+ *该字段的全称为:Plain text representation of the concept
+ *该字段的定义为:A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.
+ *该字段的描述为:Very often the text is the same as a displayName of one of the codings.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} text = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Identifier
+ *该数据类型的全称为:An identifier intended for computation
+ *该数据类型的定义为:A technical identifier - identifies some entity uniquely and unambiguously.
+ *该数据类型的描述为:
+*/
+  record Identifier {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Identifier.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Identifier.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Identifier.use
+ *该字段的全称为:usual | official | temp | secondary (If known)
+ *该字段的定义为:The purpose of this identifier.
+ *该字段的描述为:This is labeled as "Is Modifier" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} use = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Identifier.type
+ *该字段的全称为:Description of identifier
+ *该字段的定义为:A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.
+ *该字段的描述为:Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:CodeableConcept
+*/
+ union { null, CodeableConcept} type = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Identifier.system
+ *该字段的全称为:The namespace for the identifier
+ *该字段的定义为:Establishes the namespace in which set of possible id values is unique.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Identifier.value
+ *该字段的全称为:The value that is unique
+ *该字段的定义为:The portion of the identifier typically displayed to the user and which is unique within the context of the system.
+ *该字段的描述为:If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} value = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Identifier.period
+ *该字段的全称为:Time period when id is/was valid for use
+ *该字段的定义为:Time period during which identifier is/was valid for use.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Period
+*/
+ union { null, Period} period = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Identifier.assigner
+ *该字段的全称为:Organization that issued id (may be just text)
+ *该字段的定义为:Organization that issued/manages the identifier.
+ *该字段的描述为:The reference may be just a text description of the assigner.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+ union { null, Reference} assigner = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Signature
+ *该数据类型的全称为:An XML digital Signature
+ *该数据类型的定义为:An XML digital signature along with supporting context.
+ *该数据类型的描述为:The elements of the Signature Resource are for ease of access of these elements. The non-repudiation proof comes from the XML-Signature  validation, which includes validation of the referenced objects (e.g., Resources) (a.k.a., Content) in the XML-Signature Detached form.
+*/
+  record Signature {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Signature.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Signature.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Signature.type
+ *该字段的全称为:Indication of the reason the entity signed the object(s)
+ *该字段的定义为:An indication of the reason that the entity signed this document. This may be explicitly included as part of the signature information and can be used when determining accountability for various actions concerning the document.
+ *该字段的描述为:Examples include attesting to: authorship, correct transcription, and witness of specific event. Also known as a “Commitment Type Indication”.
+ *该字段的出现次数为:1..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Coding
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Signature.when
+ *该字段的全称为:When the signature was created
+ *该字段的定义为:When the digital signature was signed.
+ *该字段的描述为:This should agree with the information in the signature.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:instant
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Signature.who[x]
+ *该字段的全称为:Who signed the signature
+ *该字段的定义为:A reference to an application-usable description of the person that signed the certificate (e.g. the signature used their private key).
+ *该字段的描述为:This should agree with the information in the signature.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Signature.blob
+ *该字段的全称为:The actual XML Dig-Sig
+ *该字段的定义为:The base64 encoding of the XML-Signature.
+ *该字段的描述为:Where the signed content is a FHIR Resource(s), the signature is of the XML form of the Resource(s) using  XML-Signature (XMLDIG) "Detached Signature" form.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:base64Binary
+*/
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Extension
+ *该数据类型的全称为:Optional Extensions Element - found in all resources.
+ *该数据类型的定义为:Optional Extensions Element - found in all resources.
+ *该数据类型的描述为:
+*/
+  record Extension {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Extension.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Extension.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Extension.url
+ *该字段的全称为:identifies the meaning of the extension
+ *该字段的定义为:Source of the definition for the extension code - a logical name or a URL.
+ *该字段的描述为:The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Extension.value[x]
+ *该字段的全称为:Value of extension
+ *该字段的定义为:Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:*
+*/
+ union { null, *} value[x] = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:BackboneElement
+ *该数据类型的全称为:Base for elements defined inside a resource
+ *该数据类型的定义为:Base definition for all elements that are defined inside a resource - but not those in a data type.
+ *该数据类型的描述为:
+*/
+  record BackboneElement {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:BackboneElement.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:BackboneElement.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:BackboneElement.modifierExtension
+ *该字段的全称为:Extensions that cannot be ignored
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} modifierExtension = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Narrative
+ *该数据类型的全称为:A human-readable formatted text, including images
+ *该数据类型的定义为:A human-readable formatted text, including images.
+ *该数据类型的描述为:
+*/
+  record Narrative {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Narrative.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Narrative.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Narrative.status
+ *该字段的全称为:generated | extensions | additional | empty
+ *该字段的定义为:The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Narrative.div
+ *该字段的全称为:Limited xhtml content
+ *该字段的定义为:The actual narrative content, a stripped down version of XHTML.
+ *该字段的描述为:The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained stylesheets. The XHTML content may not contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:xhtml
+*/
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Element
+ *该数据类型的全称为:Base for all elements
+ *该数据类型的定义为:Base definition for all elements in a resource.
+ *该数据类型的描述为:
+*/
+  record Element {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Element.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Element.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:ElementDefinition
+ *该数据类型的全称为:Definition of an elements in a resource or extension
+ *该数据类型的定义为:Captures constraints on each element within the resource, profile, or extension.
+ *该数据类型的描述为:
+*/
+  record ElementDefinition {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.path
+ *该字段的全称为:The path of the element (see the Detailed Descriptions)
+ *该字段的定义为:The path identifies the element and is expressed as a "."-separated list of ancestor elements, beginning with the name of the resource or extension.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.representation
+ *该字段的全称为:How this element is represented in instances
+ *该字段的定义为:Codes that define how this element is represented in instances, when the deviation varies from the normal case.
+ *该字段的描述为:This is rarely used except for special cases where the representation deviates from the normal, which is done only very reluctantly, and can only be done in the base standard (and profiles must reproduce what the base standard does).
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null,  array<code>} representation = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.name
+ *该字段的全称为:Name for this particular element definition (reference target)
+ *该字段的定义为:The name of this element definition (to refer to it from other element definitions using ElementDefinition.nameReference). This is a unique name referring to a specific set of constraints applied to this element. One use of this is to provide a name to different slices of the same element.
+ *该字段的描述为:The name SHALL be unique within the structure within the context of the constrained resource element.  (Though to avoid confusion, uniqueness across all elements is recommended.).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} name = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.label
+ *该字段的全称为:Name for element to display with or prompt for element
+ *该字段的定义为:The text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form.
+ *该字段的描述为:Question and label serve similar purposes in they both can be used to prompt for capturing a data element.  Whether the question form or label form should be used will depend on the type of instrument being used to capture the information.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} label = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.code
+ *该字段的全称为:Defining code
+ *该字段的定义为:A code that provides the meaning for the element according to a particular terminology.
+ *该字段的描述为:The data element definition and other constraints SHALL be a proper constraint on the meaning (as defined in the code system, including relationships) of any code listed here.
+
+Where multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Coding
+*/
+ union { null,  array<Coding>} code = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.slicing
+ *该字段的全称为:This element is sliced - slices follow
+ *该字段的定义为:Indicates that the element is sliced into a set of alternative definitions (there are multiple definitions on a single element in the base resource). The set of slices is any elements that come after this in the element sequence that have the same path, until a shorter path occurs (the shorter path terminates the set).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:
+*/
+ union { null, } slicing = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.slicing.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} slicing.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.slicing.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} slicing.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.slicing.discriminator
+ *该字段的全称为:Element values that used to distinguish the slices
+ *该字段的定义为:Designates which child elements are used to discriminate between the slices when processing an instance. If one or more discriminators are provided, the value of the child elements in the instance data SHALL completely distinguish which slice the element in the resource matches based on the allowed values for those elements in each of the slices.
+ *该字段的描述为:If there is no discriminator, the content is hard to process, so this should be avoided.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} slicing.discriminator = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.slicing.description
+ *该字段的全称为:Text description of how slicing works (or not)
+ *该字段的定义为:A human-readable text description of how the slicing works. If there is no discriminator, this is required to be present to provide whatever information is possible about how the slices can be differentiated.
+ *该字段的描述为:If it's really not possible to differentiate them, the design should be re-evaluated to make te content usable.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} slicing.description = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.slicing.ordered
+ *该字段的全称为:If elements must be in same order as slices
+ *该字段的定义为:If the matching elements have to occur in the same order as defined in the profile.
+ *该字段的描述为:Order should only be required when it is a pressing concern for presentation. Profile authors should consider making the order a feature of the rules about the narrative, not the rules about the data - requiring ordered data makes the profile much less re-usable.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:boolean
+*/
+ union { null, boolean} slicing.ordered = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.slicing.rules
+ *该字段的全称为:closed | open | openAtEnd
+ *该字段的定义为:Whether additional slices are allowed or not. When the slices are ordered, profile authors can also say that additional slices are only allowed at the end.
+ *该字段的描述为:Allowing additional elements makes for a much for flexible template - it's open for use in wider contexts, but also means that the content of the resource is not closed, and applications have to decide how to handle content not described by the profile.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.short
+ *该字段的全称为:Concise definition for xml presentation
+ *该字段的定义为:A concise definition that  is shown in the generated XML format that summarizes profiles (used throughout the specification).
+ *该字段的描述为:May change the term to provide language more appropriate to the context of the profile or to reflect slicing.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} short = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.definition
+ *该字段的全称为:Full formal definition as narrative text
+ *该字段的定义为:Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource.
+ *该字段的描述为:It is easy for a different definition to change the meaning of an element and this can have nasty downstream consequences. Please be careful when providing definitions.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} definition = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.comments
+ *该字段的全称为:Comments about the use of this element
+ *该字段的定义为:Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc.
+ *该字段的描述为:If it is possible to capture usage rules using invariants, that mechanism should be used in preference to this element.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} comments = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.requirements
+ *该字段的全称为:Why is this needed?
+ *该字段的定义为:This element is for traceability of why the element was created and why the constraints exist as they do. This may be used to point to source materials or specifications that drove the structure of this element.
+ *该字段的描述为:This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} requirements = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.alias
+ *该字段的全称为:Other names
+ *该字段的定义为:Identifies additional names by which this element might also be known.
+ *该字段的描述为:
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} alias = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.min
+ *该字段的全称为:Minimum Cardinality
+ *该字段的定义为:The minimum number of times this element SHALL appear in the instance.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} min = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.max
+ *该字段的全称为:Maximum Cardinality (a number or *)
+ *该字段的定义为:The maximum number of times this element is permitted to appear in the instance.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} max = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.type
+ *该字段的全称为:Data type and Profile for this element
+ *该字段的定义为:The data type or resource that the value of this element is permitted to be.
+ *该字段的描述为:The Type of the element can be left blank, in which case the type is inherited from the resource. The type can only be listed in this field if it is an allowed option in the base resource.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:
+*/
+ union { null,  array<>} type = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.type.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} type.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.type.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} type.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.type.code
+ *该字段的全称为:Name of Data type or Resource
+ *该字段的定义为:Name of Data type or Resource that is a(or the) type used for this element.
+ *该字段的描述为:If the element is a reference to another resource, this element contains "Reference", and the profile element refers to the profile of the allowed target of the resource, which may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient). There would be one pair of type/code for each allowed target resource type.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.type.profile
+ *该字段的全称为:Profile.structure to apply
+ *该字段的定义为:Identifies a profile structure that SHALL hold for resources or datatypes referenced as the type of this element. Can be a local reference - to another structure in this profile, or a reference to a structure in another profile. When more than one profile is specified, the content must conform to all of them.
+ *该字段的描述为:The reference might be a simple name in the form #[name], which is a reference to another named constraint in a resource - where the resource contains more than one constraint, or a URL which is a reference to a resource Profile, with a terminal #[name] which identifies a specific structure entry in the profile.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null,  array<uri>} type.profile = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.type.aggregation
+ *该字段的全称为:contained | referenced | bundled - how aggregated
+ *该字段的定义为:If the type is a reference to another resource, how the resource is or can be aggreated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle.
+ *该字段的描述为:
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null,  array<code>} type.aggregation = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.nameReference
+ *该字段的全称为:To another element constraint (by element.name)
+ *该字段的定义为:Identifies the name of a slice defined elsewhere in the profile whose constraints should be applied to the current element.
+ *该字段的描述为:If child components of this element are defined, they act as constraints on the referenced slice.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} nameReference = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.defaultValue[x]
+ *该字段的全称为:Specified value it missing from instance
+ *该字段的定义为:The value that should be used if there is no value stated in the instance.
+ *该字段的描述为:Default values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. Specifying a default value means that the property can never been unknown - it must always have a value. Further, the default value can never be changed. For these reasons, default values are (and should be) used extremely sparingly.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:*
+*/
+ union { null, *} defaultValue[x] = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.meaningWhenMissing
+ *该字段的全称为:Implicit meaning when this element is missing
+ *该字段的定义为:The Implicit meaning that is to be understood when this element is missing.
+ *该字段的描述为:Implicit meanings for missing values can only be specified on a resource, data type, or extension definition, and never in a profile that applies to one of these. An implicit meaning for a missing value can never be changed, and specifying one has the consequence that constraining its use in profiles eliminates use cases as possibilities, not merely moving them out of scope.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} meaningWhenMissing = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.fixed[x]
+ *该字段的全称为:Value must be exactly this
+ *该字段的定义为:Specifies a value that SHALL be exactly the value  for this element in the instance. For purposes of comparison, non-signficant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
+ *该字段的描述为:This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:*
+*/
+ union { null, *} fixed[x] = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.pattern[x]
+ *该字段的全称为:Value must have at least these property values
+ *该字段的定义为:Specifies a value that the value in the instance SHALL follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example.  The values of elements present in the pattern must match exactly (case-senstive, accent-sensitive, etc.).
+ *该字段的描述为:Mostly used for fixing values of CodeableConcept.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:*
+*/
+ union { null, *} pattern[x] = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.example[x]
+ *该字段的全称为:Example value: [as defined for type]
+ *该字段的定义为:A sample value for this element demonstrating the type of information that would typically be captured.
+ *该字段的描述为:This will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)
+
+If the example value are fully populated, the publication tool can generate an instance automatically.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:*
+*/
+ union { null, *} example[x] = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.maxLength
+ *该字段的全称为:Max length for strings
+ *该字段的定义为:Indicates the maximum length in characters that is permitted to be present in conformant instances and which is expected to be supported by conformant consumers that support the element.
+ *该字段的描述为:Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} maxLength = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.condition
+ *该字段的全称为:Reference to invariant about presence
+ *该字段的定义为:A reference to an invariant that may make additional statements about the cardinality or value in the instance.
+ *该字段的描述为:
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null,  array<id>} condition = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.constraint
+ *该字段的全称为:Condition that must evaluate to true
+ *该字段的定义为:Formal constraints such as co-occurrence and other constraints that can be computationally evaluated within the context of the instance.
+ *该字段的描述为:Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:
+*/
+ union { null,  array<>} constraint = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.constraint.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} constraint.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.constraint.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} constraint.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.constraint.key
+ *该字段的全称为:Target of 'condition' reference above
+ *该字段的定义为:Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.constraint.name
+ *该字段的全称为:Short human label
+ *该字段的定义为:Used to label the constraint in OCL or in short displays incapable of displaying the full human description.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} constraint.name = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.constraint.severity
+ *该字段的全称为:error | warning
+ *该字段的定义为:Identifies the impact constraint violation has on the conformance of the instance.
+ *该字段的描述为:This allows constraints to be asserted as "shall" (error) and "should" (warning).
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.constraint.human
+ *该字段的全称为:Human description of constraint
+ *该字段的定义为:Text that can be used to describe the constraint in messages identifying that the constraint has been violated.
+ *该字段的描述为:Should be expressed in business terms as much as possible.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.constraint.xpath
+ *该字段的全称为:XPath expression of constraint
+ *该字段的定义为:An XPath expression of constraint that can be executed to see if this constraint is met.
+ *该字段的描述为:Elements SHALL use "f" as the namespace prefix for the FHIR namespace, and "x" for the xhtml namespace, and SHALL NOT use any other prefixes.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.mustSupport
+ *该字段的全称为:If the element must supported
+ *该字段的定义为:If true, conformant resource authors SHALL be capable of providing a value for the element and resource consumers SHALL be capable of extracting and doing something useful with the data element.  If false, the element may be ignored and not supported.
+ *该字段的描述为:"Something useful" is context dependent. This flag is never set to true by the FHIR specification itself - it is only set to true in profiles, and when the profile sets it true, it SHALL describe what it means for applications to support the element. In general, the question is what would a reasonable observer expect of a system that explicitly claims to "support" this element?
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:boolean
+*/
+ union { null, boolean} mustSupport = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.isModifier
+ *该字段的全称为:If this modifies the meaning of other elements
+ *该字段的定义为:If true, the value of this element affects the interpretation of the element or resource that contains it, and the value of the element cannot be ignored. Typically, this is used for status, negation and qualification codes. The effect of this is that the element cannot be ignored by systems: they SHALL either recognize the element and process it, and/or a pre-determination has been made that it is not relevant to their particular system.
+ *该字段的描述为:Only the definition of an element can set IsModifier true - either the specification itself or where an extension is originally defined. Once set to false, it cannot be set to true in derived profiles. An element/extension that has isModifier=true SHOULD also have a minimum cardinality of 1, so that there is no lack of clarity about what to do if it is missing. If it can be missing, the definition SHALL make the meaning of a missing element clear.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:boolean
+*/
+ union { null, boolean} isModifier = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.isSummary
+ *该字段的全称为:Include when _summary = true?
+ *该字段的定义为:Whether the element should be included if a client requests a search with the parameter _summary=true.
+ *该字段的描述为:Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarised resources for optimal performance, so servers may not support per-profile use of the isSummary flag.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:boolean
+*/
+ union { null, boolean} isSummary = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.binding
+ *该字段的全称为:ValueSet details if this is coded
+ *该字段的定义为:Binds to a value set if this element is coded (code, Coding, CodeableConcept).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:
+*/
+ union { null, } binding = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.binding.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} binding.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.binding.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} binding.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.binding.name
+ *该字段的全称为:Descriptive Name
+ *该字段的定义为:A descriptive name for this - can be useful for generating implementation artifacts.
+ *该字段的描述为:SHALL be unique within the profile.  If the same name as an imported profile, will override the imported binding (and SHALL be a proper constraint on the imported binding).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} binding.name = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.binding.strength
+ *该字段的全称为:required | extensible | preferred | example
+ *该字段的定义为:Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances.
+ *该字段的描述为:For further discussion, see [[[Using Terminologies]]].
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.binding.description
+ *该字段的全称为:Human explanation of the value set
+ *该字段的定义为:Describes the intended use of this particular set of codes.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} binding.description = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.binding.valueSet[x]
+ *该字段的全称为:Source of value set
+ *该字段的定义为:Points to the value set or external definition (e.g. implicit value set) that identifies the set of codes to be used.
+ *该字段的描述为:For value sets,the referenceResource, the display can contain the value set description.  The reference may be version-specific or not.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} binding.valueSet[x] = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.mapping
+ *该字段的全称为:Map element to another set of definitions
+ *该字段的定义为:Identifies a concept from an external specification that roughly corresponds to this element.
+ *该字段的描述为:Mappings are not necessarily specific enough for safe translation.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:
+*/
+ union { null,  array<>} mapping = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.mapping.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} mapping.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.mapping.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} mapping.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.mapping.identity
+ *该字段的全称为:Reference to mapping declaration
+ *该字段的定义为:An internal reference to the definition of a mapping.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.mapping.language
+ *该字段的全称为:Computable language of mapping
+ *该字段的定义为:Identifies the computable language in which mapping.map is expressed.
+ *该字段的描述为:If omitted, then there can be no expectation of computational interpretation of the mapping.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} mapping.language = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ElementDefinition.mapping.map
+ *该字段的全称为:Details of the mapping
+ *该字段的定义为:Expresses what part of the target specification corresponds to this element.
+ *该字段的描述为:For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Timing
+ *该数据类型的全称为:A timing schedule that specifies an event that may occur multiple times
+ *该数据类型的定义为:Specifies an event that may occur multiple times. Timing schedules are used to record when things are expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds.
+ *该数据类型的描述为:A timing schedule can be either a list of events - intervals on which the event occurs, or a single event with repeating criteria or just repeating criteria with no actual event.  When both event and a repeating specification are provided, the list of events should be understood as an interpretation of the information in the repeat structure.
+*/
+  record Timing {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.event
+ *该字段的全称为:When the event occurs
+ *该字段的定义为:Identifies specific times when the event occurs.
+ *该字段的描述为:
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:dateTime
+*/
+ union { null,  array<dateTime>} event = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat
+ *该字段的全称为:When the event is to occur
+ *该字段的定义为:A set of rules that describe when the event should occur.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:
+*/
+ union { null, } repeat = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} repeat.id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} repeat.extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.bounds
+ *该字段的全称为:Start and/or end limits
+ *该字段的定义为:Outer bounds for start and/or end limits of the timing schedule.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Period
+*/
+ union { null, Period} repeat.bounds = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.count
+ *该字段的全称为:Number of times to repeat
+ *该字段的定义为:A total count of the desired number of repetitions.
+ *该字段的描述为:If you have both bounds and count, then this should be understand as within the bounds period, until count times happens.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} repeat.count = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.duration
+ *该字段的全称为:How long when it happens
+ *该字段的定义为:How long this thing happens for when it happens.
+ *该字段的描述为:For some events the duration is part of the definition of the event (e.g. IV infusions). For others, it's part of the timing specification (e.g. exercise).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} repeat.duration = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.durationUnits
+ *该字段的全称为:s | min | h | d | wk | mo | a - unit of time (UCUM)
+ *该字段的定义为:The units of time for the duration, in UCUM units.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} repeat.durationUnits = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.frequency
+ *该字段的全称为:Event occurs frequency times per duration
+ *该字段的定义为:The number of times to repeat the action within the specified period / period range (i.e. both period and periodMax provided).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} repeat.frequency = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.frequencyMax
+ *该字段的全称为:Event occurs frequency times per duration
+ *该字段的定义为:If present, indicates that the frequency is a range - so repeat between [frequency] and [frequencyMax] times within the period or period range.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:integer
+*/
+ union { null, integer} repeat.frequencyMax = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.period
+ *该字段的全称为:Event occurs frequency times per period
+ *该字段的定义为:Indicates the duration of time over which repetitions are to occur.  E.g. to express "3 times per day", 3 would be the frequency and "1 day" would be the period.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} repeat.period = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.periodMax
+ *该字段的全称为:Upper limit of period (3-4 hours)
+ *该字段的定义为:If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as "do this once every 3-5 days.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} repeat.periodMax = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.periodUnits
+ *该字段的全称为:s | min | h | d | wk | mo | a - unit of time (UCUM)
+ *该字段的定义为:The units of time for the period in UCUM units.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} repeat.periodUnits = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.when
+ *该字段的全称为:Regular life events the event is tied to
+ *该字段的定义为:A real world event that the occurrence of the event should be tied to.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} repeat.when = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.code
+ *该字段的全称为:BID | TID | QID | AM | PM +
+ *该字段的定义为:A code for the timing pattern. Some codes such as BID are uniquitious, but many instutions define their own additional codes.
+ *该字段的描述为:A repeat should always be defined except for the common codes BID, TID, QID, AM and PM, which all systems are required to understand.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:CodeableConcept
+*/
+ union { null, CodeableConcept} code = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Address
+ *该数据类型的全称为:A postal address
+ *该数据类型的定义为:There is a variety of postal address formats defined around the world. This format defines a superset that is the basis for all addresses around the world.
+ *该数据类型的描述为:Note: address is for postal addresses, not physical locations.
+*/
+  record Address {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.use
+ *该字段的全称为:home | work | temp | old - purpose of this address
+ *该字段的定义为:The purpose of this address.
+ *该字段的描述为:This is labeled as "Is Modifier" because applications should not mistake a temporary or old address etc for a current/permanent one. Applications can assume that an address is current unless it explicitly says that it is temporary or old.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} use = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.text
+ *该字段的全称为:Text representation of the address
+ *该字段的定义为:A full text representation of the address.
+ *该字段的描述为:Can provide both a text representation and parts.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} text = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.line
+ *该字段的全称为:Street name, number, direction & P.O. Box etc
+ *该字段的定义为:This component contains the house number, apartment number, street name, street direction, 
+P.O. Box number, delivery hints, and similar address information.
+ *该字段的描述为:
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} line = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.city
+ *该字段的全称为:Name of city, town etc.
+ *该字段的定义为:The name of the city, town, village or other community or delivery center.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} city = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.state
+ *该字段的全称为:Sub-unit of country (abreviations ok)
+ *该字段的定义为:Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} state = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.postalCode
+ *该字段的全称为:Postal code for area
+ *该字段的定义为:A postal code designating a region defined by the postal service.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} postalCode = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.country
+ *该字段的全称为:Country (can be ISO 3166 3 letter code)
+ *该字段的定义为:Country - a nation as commonly understood or generally accepted.
+ *该字段的描述为:ISO 3166 3 letter codes can be used in place of a full country name.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} country = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.period
+ *该字段的全称为:Time period when address was/is in use
+ *该字段的定义为:Time period when address was/is in use.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Period
+*/
+ union { null, Period} period = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:HumanName
+ *该数据类型的全称为:Name of a human - parts and usage
+ *该数据类型的定义为:A human's name with the ability to identify parts and usage.
+ *该数据类型的描述为:Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts may or may not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.
+*/
+  record HumanName {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.use
+ *该字段的全称为:usual | official | temp | nickname | anonymous | old | maiden
+ *该字段的定义为:Identifies the purpose for this name.
+ *该字段的描述为:This is labeled as "Is Modifier" because applications should not mistake a temporary or old name etc for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} use = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.text
+ *该字段的全称为:Text representation of the full name
+ *该字段的定义为:A full text representation of the name.
+ *该字段的描述为:Can provide both a text representation and structured parts.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} text = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.family
+ *该字段的全称为:Family name (often called 'Surname')
+ *该字段的定义为:The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.
+ *该字段的描述为:For family name, hyphenated names such as "Smith-Jones" are a single name, but names with spaces such as "Smith Jones" are broken into multiple parts.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} family = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.given
+ *该字段的全称为:Given names (not always 'first'). Includes middle names
+ *该字段的定义为:Given name.
+ *该字段的描述为:If only initials are recorded, they may be used in place of the full name.  Not called "first name" since given names do not always come first.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} given = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.prefix
+ *该字段的全称为:Parts that come before the name
+ *该字段的定义为:Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
+ *该字段的描述为:
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} prefix = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.suffix
+ *该字段的全称为:Parts that come after the name
+ *该字段的定义为:Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
+ *该字段的描述为:
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null,  array<string>} suffix = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:HumanName.period
+ *该字段的全称为:Time period when name was/is in use
+ *该字段的定义为:Indicates the period of time when this name was valid for the named person.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Period
+*/
+ union { null, Period} period = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Meta
+ *该数据类型的全称为:Metadata about a resource
+ *该数据类型的定义为:The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.
+ *该数据类型的描述为:
+*/
+  record Meta {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Meta.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Meta.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Meta.versionId
+ *该字段的全称为:Version specific identifier
+ *该字段的定义为:The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.
+ *该字段的描述为:The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} versionId = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Meta.lastUpdated
+ *该字段的全称为:When the resource version last changed
+ *该字段的定义为:When the resource last changed - e.g. when the version changed.
+ *该字段的描述为:This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:instant
+*/
+ union { null, instant} lastUpdated = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Meta.profile
+ *该字段的全称为:Profiles this resource claims to conform to
+ *该字段的定义为:A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].
+ *该字段的描述为:It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.
+
+The list of profile URLs is a set.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null,  array<uri>} profile = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Meta.security
+ *该字段的全称为:Security Labels applied to this resource
+ *该字段的定义为:Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.
+ *该字段的描述为:The security labels can be updated without changing the stated version of the resource
+
+The list of security labels is a set. Uniqueness is based the system/code, and version and display are ignored.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Coding
+*/
+ union { null,  array<Coding>} security = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Meta.tag
+ *该字段的全称为:Tags applied
+ *该字段的定义为:Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.
+ *该字段的描述为:The tags can be updated without changing the stated version of the resource.
+
+The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Coding
+*/
+ union { null,  array<Coding>} tag = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:ContactPoint
+ *该数据类型的全称为:Details of a Technology mediated contact point (phone, fax, email, etc)
+ *该数据类型的定义为:Details for All kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
+ *该数据类型的描述为:
+*/
+  record ContactPoint {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ContactPoint.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ContactPoint.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ContactPoint.system
+ *该字段的全称为:phone | fax | email | url
+ *该字段的定义为:Telecommunications form for contact point - what communications system is required to make use of the contact.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ContactPoint.value
+ *该字段的全称为:The actual contact point details
+ *该字段的定义为:The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).
+ *该字段的描述为:Additional out of band data such as extensions, or notes about use of the contact are sometimes included in the value.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} value = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ContactPoint.use
+ *该字段的全称为:home | work | temp | old | mobile - purpose of this contact point
+ *该字段的定义为:Identifies the purpose for the contact point.
+ *该字段的描述为:This is labeled as "Is Modifier" because applications should not mistake a temporary or old contact etc for a current/permanent one. Applications can assume that a contact is current unless it explicitly says that it is temporary or old.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} use = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:ContactPoint.period
+ *该字段的全称为:Time period when the contact point was/is in use
+ *该字段的定义为:Time period when the contact point was/is in use.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Period
+*/
+ union { null, Period} period = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
+ *该数据类型的名称为:Quantity
+ *该数据类型的全称为:A duration (length of time) with a UCUM code
+ *该数据类型的定义为:There SHALL be a code if there is a value and it SHALL be an expression of time.  If system is present, it SHALL be UCUM.  If value is present, it SHALL be positive.
+ *该数据类型的描述为:The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.
+*/
+  record Age {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.value
+ *该字段的全称为:Numerical value (with implicit precision)
+ *该字段的定义为:The value of the measured amount. The value includes an implicit precision in the presentation of the value.
+ *该字段的描述为:The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} value = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.comparator
+ *该字段的全称为:< | <= | >= | > - how to understand the value
+ *该字段的定义为:How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues. E.g. if the comparator is "<" , then the real value is < stated value.
+ *该字段的描述为:This is labeled as "Is Modifier" because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} comparator = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.units
+ *该字段的全称为:Unit representation
+ *该字段的定义为:A human-readable form of the units.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} units = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.system
+ *该字段的全称为:System that defines coded unit form
+ *该字段的定义为:The identification of the system that provides the coded form of the unit.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.code
+ *该字段的全称为:Coded form of the unit
+ *该字段的定义为:A computer processable form of the units in some unit representation system.
+ *该字段的描述为:The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.
+
+The context of use may additionally require a code from a particular system.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} code = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
+ *该数据类型的名称为:Quantity
+ *该数据类型的全称为:A count of a discrete element (no unit)
+ *该数据类型的定义为:There SHALL be a code with a value of "1" if there is a value and it SHALL be an expression of length.  If system is present, it SHALL be UCUM.  If present, the value SHALL a whole number.
+ *该数据类型的描述为:The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.
+*/
+  record Count {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.value
+ *该字段的全称为:Numerical value (with implicit precision)
+ *该字段的定义为:The value of the measured amount. The value includes an implicit precision in the presentation of the value.
+ *该字段的描述为:The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} value = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.comparator
+ *该字段的全称为:< | <= | >= | > - how to understand the value
+ *该字段的定义为:How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues. E.g. if the comparator is "<" , then the real value is < stated value.
+ *该字段的描述为:This is labeled as "Is Modifier" because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} comparator = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.units
+ *该字段的全称为:Unit representation
+ *该字段的定义为:A human-readable form of the units.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} units = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.system
+ *该字段的全称为:System that defines coded unit form
+ *该字段的定义为:The identification of the system that provides the coded form of the unit.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.code
+ *该字段的全称为:Coded form of the unit
+ *该字段的定义为:A computer processable form of the units in some unit representation system.
+ *该字段的描述为:The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.
+
+The context of use may additionally require a code from a particular system.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} code = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
+ *该数据类型的名称为:Quantity
+ *该数据类型的全称为:An amount of money. With regard to precision, see [[X]]
+ *该数据类型的定义为:There SHALL be a code if there is a value and it SHALL be an expression of currency.  If system is present, it SHALL be ISO 4217 (system = "urn:iso:std:iso:4217" - currency).
+ *该数据类型的描述为:The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.
+*/
+  record Money {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.value
+ *该字段的全称为:Numerical value (with implicit precision)
+ *该字段的定义为:The value of the measured amount. The value includes an implicit precision in the presentation of the value.
+ *该字段的描述为:The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} value = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.comparator
+ *该字段的全称为:< | <= | >= | > - how to understand the value
+ *该字段的定义为:How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues. E.g. if the comparator is "<" , then the real value is < stated value.
+ *该字段的描述为:This is labeled as "Is Modifier" because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} comparator = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.units
+ *该字段的全称为:Unit representation
+ *该字段的定义为:A human-readable form of the units.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} units = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.system
+ *该字段的全称为:System that defines coded unit form
+ *该字段的定义为:The identification of the system that provides the coded form of the unit.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.code
+ *该字段的全称为:Coded form of the unit
+ *该字段的定义为:A computer processable form of the units in some unit representation system.
+ *该字段的描述为:The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.
+
+The context of use may additionally require a code from a particular system.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} code = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
+ *该数据类型的名称为:Quantity
+ *该数据类型的全称为:A measure of distance
+ *该数据类型的定义为:There SHALL be a code if there is a value and it SHALL be an expression of length.  If system is present, it SHALL be UCUM.
+ *该数据类型的描述为:The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.
+*/
+  record Distance {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.value
+ *该字段的全称为:Numerical value (with implicit precision)
+ *该字段的定义为:The value of the measured amount. The value includes an implicit precision in the presentation of the value.
+ *该字段的描述为:The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} value = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.comparator
+ *该字段的全称为:< | <= | >= | > - how to understand the value
+ *该字段的定义为:How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues. E.g. if the comparator is "<" , then the real value is < stated value.
+ *该字段的描述为:This is labeled as "Is Modifier" because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} comparator = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.units
+ *该字段的全称为:Unit representation
+ *该字段的定义为:A human-readable form of the units.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} units = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.system
+ *该字段的全称为:System that defines coded unit form
+ *该字段的定义为:The identification of the system that provides the coded form of the unit.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.code
+ *该字段的全称为:Coded form of the unit
+ *该字段的定义为:A computer processable form of the units in some unit representation system.
+ *该字段的描述为:The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.
+
+The context of use may additionally require a code from a particular system.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} code = null;
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
+ *该数据类型的名称为:Quantity
+ *该数据类型的全称为:A length of time
+ *该数据类型的定义为:There SHALL be a code if there is a value and it SHALL be an expression of time.  If system is present, it SHALL be UCUM.
+ *该数据类型的描述为:The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.
+*/
+  record Duration {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.value
+ *该字段的全称为:Numerical value (with implicit precision)
+ *该字段的定义为:The value of the measured amount. The value includes an implicit precision in the presentation of the value.
+ *该字段的描述为:The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} value = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.comparator
+ *该字段的全称为:< | <= | >= | > - how to understand the value
+ *该字段的定义为:How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues. E.g. if the comparator is "<" , then the real value is < stated value.
+ *该字段的描述为:This is labeled as "Is Modifier" because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:true
+ *该字段的数据类型是:code
+*/
+ union { null, code} comparator = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.units
+ *该字段的全称为:Unit representation
+ *该字段的定义为:A human-readable form of the units.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+ union { null, string} units = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.system
+ *该字段的全称为:System that defines coded unit form
+ *该字段的定义为:The identification of the system that provides the coded form of the unit.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:uri
+*/
+ union { null, uri} system = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Quantity.code
+ *该字段的全称为:Coded form of the unit
+ *该字段的定义为:A computer processable form of the units in some unit representation system.
+ *该字段的描述为:The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.
+
+The context of use may additionally require a code from a particular system.
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} code = null;
+}
+}

@@ -1,0 +1,18 @@
+{
+    "type": "record",
+    "name": "extension",
+    "namespace" : "hl7.org/fhir",
+    "fields": [
+        {
+            "name": "url",
+            "type": "string"
+        },
+        {
+            "name": "value",
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    ]
+}

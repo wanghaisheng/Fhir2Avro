@@ -32,16 +32,18 @@ oid=uri=string
 
 
 variable-length zig-zag coding. Some examples:
-value	hex
-0	00
--1	01
-1	02
--2	03
-2	04
-...
--64	7f
-64	 80
-...
+
+| value | hex(十六进制编码) |
+|:------|:------------------|
+| 0     | 00                |
+| -1    | 01                |
+| 1     | 02                |
+| -2    | 03                |
+| 2     | 04                |
+| ...   | ...               |
+| -64   | 7f                |
+| 64    | 80                |
+| ...   | ...               |
 
 For example, the three-character string "foo" would be encoded as the long value 3 (encoded as hex 06) followed by the UTF-8 encoding of 'f', 'o', and 'o' (the hex bytes 66 6f 6f):
 
@@ -50,125 +52,27 @@ For example, the three-character string "foo" would be encoded as the long value
 
 ### FHIR 基本类型
 
-boolean
-integer
-string
-decimal
-uri
-base64Binary
-instant
-date
-dateTime
-time
 
-code string  regex: [^\s]+([\s]+[^\s]+)*
-oid  uri  represented as a URI (RFC 3001). e.g. urn:oid:1.2.3.4.5
-id   string  regex: [A-Za-z0-9\-\.]{1,64}
-unsignedInt int regex: [0-9]+
-positiveInt  int  regex: [1-9][0-9]+
+| 数据类型名称 | 数据类型含义                                                                                                                                                                         | 说明                                                    | XML Representation                                                    | JSON representation                | AVRO representation                                                                                                                                                                        |
+|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|:----------------------------------------------------------------------|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| boolean      | true /false                                                                                                                                                                          | :------------                                           | xs:boolean, 值可以为true或者false（0和1是无效的值）                   | JSON boolean (true or false)       | boolean                                                                                                                                                                                    |
+| integer      | 32位整数（对于更大的值，使用decimal                                                                                                                                                  | :------------                                           | xs:int                                                                | integer                            | int                                                                                                                                                                                        |
+| string       | Unicode编码的字符序列                                                                                                                                                                | :------------                                           | xs:string                                                             | string                             | string                                                                                                                                                                                     |
+| decimal      | 带小数点的有理数                                                                                                                                                                     | :------------                                           | :----------xs:decimal, except that **decimals may not use exponents** | JSON number, but without exponents | float/double                                                                                                                                                                               |
+| uri          | 统一资源标识符([RFC 3986](http://tools.ietf.org/html/rfc3986))                                                                                                                       | 它可以是绝对的或相对的，也可能是一个可选的片段标识符（  | xs:anyURI                                                             | string                             | string                                                                                                                                                                                     |
+| base64Binary | base64(([RFC 4648](http://tools.ietf.org/html/rfc4648)))编码的字节流                                                                                                                 | :------------                                           | xs:base64Binary                                                       | JSON string - base64 content       | string                                                                                                                                                                                     |
+| instant      | 一个时间的瞬间 - **至少要到秒，总是会包括一个时区** 该类型作系统时间之用，非人用时间                                                                                                 | :------------                                           | xs:dateTime                                                           | string                             | string                                                                                                                                                                                     |
+| date         | 在人们交流时时使用的日期，日期时间或部分日期（比如年或年+月）。**不能存在时区**。日期应该是有效日期                                                                                  | Regex: -?[0-9]{4}(-(0[1-9]                              | 1[0-2])(-(0[0-9]                                                      | [1-2][0-9]                         | 3[0-1]))?)? | union of xs:date, xs:gYearMonth, xs:gYear | string | string                                                                                                                  |
+| dateTime     | 在人们交流时时使用的日期，日期时间或部分日期（比如年或年+月）。如果指定小时和分钟，通常应该加上时区。可以加上秒，也可以不加。日期应该是有效日期. **不允许如&quot;24:00&quot;的出现** | Regex: -?[0-9]{4}(-(0[1-9]                              | 1[0-2])(-(0[0-9]                                                      | [1-2][0-9]                         | 3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?)?)?)? | union of xs:dateTime, xs:date, xs:gYearMonth, xs:gYear | string | string |
+| time         | 一天内的某个时间，没有指定日期（可以转化成自午夜算起的Duration数据类型）。秒可以加上也可以不加上。**不允许出现如“24:00”或是包含时区**                                                | Regex: ([01][0-9]                                       | 2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?                              | xs:time                            | string | string                                                                                                                                                                            |
+| code         | string                                                                                                                                                                               | regex: [^\s]+([\s]+[^\s]+)*                             | string                                                                | string                             | string                                                                                                                                                                                     |
+| oid          | uri                                                                                                                                                                                  | represented as a URI (RFC 3001). e.g. urn:oid:1.2.3.4.5 | :---------------                                                      | :---------                         | :-------------------                                                                                                                                                                       |
+| id           | string                                                                                                                                                                               | regex: [A-Za-z0-9\-\.]{1,64}                            | :---------------                                                      | string                             | string                                                                                                                                                                                     |
+| unsignedInt  | int                                                                                                                                                                                  | regex: [0-9]+                                           | :---------------                                                      | integer                            | int                                                                                                                                                                                        |
+| positiveInt  | int                                                                                                                                                                                  | regex: [1-9][0-9]+                                      | :---------------                                                      | integer                            | int                                                                                                                                                                                        |
 
 
-<table class="list">
- <tr>
-   <td colspan="3">**Primitive Types**</td>
- </tr>
- <tr>
-   <th>FHIR Name</th>
-   <th>Value Domain</th>
-   <th>XML Representation</th>
-   <th>JSON representation</th>
- </tr>
- <tr>
-   <td>boolean</td>
-   <td>true | false</td>
-   <td>xs:boolean, 值可以为true或者false（0和1是无效的值）</td>
-   <td>JSON boolean (true or false)</td>
- </tr>
- <tr>
-   <td>integer</td>
-   <td>32位整数（对于更大的值，使用decimal）</td>
-   <td>xs:int</td>
-   <td>JSON number</td>
- </tr>
- <tr>
-   <td>string</td>
-   <td>Unicode编码的字符序列</td>
-   <td>xs:string</td>
-   <td>JSON String</td>
- </tr>
- <tr>
-   <td style="border-top: 0px silver solid"/>
-   <td colspan="3" style="border-top: 0px silver solid">字符串大小不超过1MB</td>
- </tr>
- <tr>
-   <td>decimal</td>
-   <td>带小数点的有理数。
-</td>
-   <td>xs:decimal, except that **decimals may not use exponents**</td>
-   <td>A JSON number, but without exponents</td>
- </tr>
- <tr>
-   <td>uri</td>
-   <td>统一资源标识符([RFC 3986](http://tools.ietf.org/html/rfc3986))</td>
-    <td>xs:anyURI</td>
-   <td>A JSON string - a URI</td>
- </tr>
- <tr>
-   <td style="border-top: 0px silver solid"/>
-   <td colspan="3" style="border-top: 0px silver solid">它可以是绝对的或相对的，也可能是一个可选的片段标识符（R </td>
- </tr>
- <tr>
-   <td>base64Binary</td>
-   <td>base64(([RFC 4648](http://tools.ietf.org/html/rfc4648)))编码的字节流 </td>
-   <td>xs:base64Binary</td>
-   <td>A JSON string - base64 content</td>
- </tr>
- <tr>
-   <td style="border-top: 0px silver solid"/>
-   <td colspan="3" style="border-top: 0px silver solid">_Todo: is it possible to impose an upper absolute limit on a base64Binary (for denial of service reasons, like on string)_</td>
- </tr>
- <tr>
-   <td>instant</td>
-   <td>一个时间的瞬间 - **至少要到秒，总是会包括一个时区**</td>
-   <td>xs:dateTime</td>
-   <td>A JSON string - an xs:dateTime</td>
- </tr>
- <tr>
-   <td style="border-top: 0px silver solid"/>
-   <td colspan="3" style="border-top: 0px silver solid">备注: 该类型作系统时间之用，非人用时间(参考下面的 date and dateTime ).</td>
- </tr>
- <tr>
-   <td>date</td>
-   <td>在人们交流时时使用的日期，日期时间或部分日期（比如年或年+月）。**不能存在时区**。日期应该是有效日期</td>
-   <td>union of xs:date, xs:gYearMonth, xs:gYear</td>
-   <td>A JSON string - a union of xs:date, xs:gYearMonth, xs:gYear</td>
-  </tr>
- <tr>
-   <td style="border-top: 0px silver solid"/>
-   <td colspan="3" style="border-top: 0px silver solid">Regex: -?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?</td>
- </tr>
- <tr>
-   <td>dateTime</td>
-   <td>在人们交流时时使用的日期，日期时间或部分日期（比如年或年+月）。如果指定小时和分钟，通常应该加上时区。可以加上秒，也可以不加。日期应该是有效日期. **不允许如&quot;24:00&quot;的出现**</td>
-   <td>union of xs:dateTime, xs:date, xs:gYearMonth, xs:gYear</td>
-   <td>A JSON string - a union of xs:dateTime, xs:date, xs:gYearMonth, xs:gYear</td>
-  </tr>
- <tr>
-   <td style="border-top: 0px silver solid"/>
-   <td colspan="3" style="border-top: 0px silver solid">Regex: -?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?)?)?)?</td>
- </tr>
- <tr>
-   <td>time</td>
-   <td>一天内的某个时间，没有指定日期（可以转化成自午夜算起的Duration数据类型）。秒可以加上也可以不加上。**不允许出现如“24:00”或是包含时区**</td>
-   <td>xs:time</td>
-   <td>A JSON string - an xs:time</td>
-  </tr>
- <tr>
-   <td style="border-top: 0px silver solid"/>
-   <td colspan="3" style="border-top: 0px silver solid">Regex: ([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?</td>
- </tr>
-</table>
-
+## FHIR复杂数据类型
 扩展
 | extension | ---------- | 否0..* | ---------- |
 | extension.url | uri | 是1..1 | ---------- |
