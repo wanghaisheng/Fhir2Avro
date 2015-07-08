@@ -7,26 +7,30 @@ var fs = require('fs');
 var jp = require('jsonpath');
 
 var Enum = require('enum');
+// 由于FHIR中decimal可能会对应到Avro的float和double两种类型，暂时用string来代替
 
 var FHIRdataTypesToAvro = new Enum({
-    'xs:int': 'xs:int',
+    'xs:int': 'int',
     'id': 'id',
-    'xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime': 'xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime',
-    'xs:integer': 'xs:integer',
-    'xs:string': 'xs:string',
-    'xs:xs:gYear, xs:gYearMonth, xs:date': 'xs:xs:gYear, xs:gYearMonth, xs:date',
-    'xs:decimal': 'xs:decimal',
-    'xs:anyURI': 'xs:anyURI',
-    'xs:base64Binary': 'xs:base64Binary',
-    'xs:time': 'xs:time',
-    'xs:uri': 'xs:uri',
-    'xs:boolean': 'xs:boolean',
-    'xs:dateTime': 'xs:dateTime',
+    'xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime': 'string',
+    'xs:integer': 'int',
+    'xs:string': 'string',
+    'xs:xs:gYear, xs:gYearMonth, xs:date': 'string',
+    'xs:decimal': 'string',
+    'xs:anyURI': 'string',
+    'xs:base64Binary': 'string',
+    'xs:time': 'string',
+    'xs:uri': 'string',
+    'xs:boolean': 'boolean',
+    'xs:dateTime': 'string',
     'dateTime': 'dateTime',
     'uri': 'uri',
     'string': 'string',
-    'code': 'code',
+    'code': 'string',
     'boolean': 'boolean',
+    'instant': 'string',
+    'unsignedInt': 'int',
+    'integer': 'int',
     'Extension': 'Extension',
     'Quantity': 'Quantity',
     'decimal': 'decimal',
@@ -36,12 +40,10 @@ var FHIRdataTypesToAvro = new Enum({
     'Coding': 'Coding',
     'Period': 'Period',
     'CodeableConcept': 'CodeableConcept',
-    'instant': 'instant',
-    'unsignedInt': 'unsignedInt',
+
     // '*','*',
     'xhtml': 'xhtml',
     'Element': 'Element',
-    'integer': 'integer',
     'Duration': 'Duration'
 });
 //读取数据类型的文件

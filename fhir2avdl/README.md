@@ -1,5 +1,8 @@
+cd  fhir2avdl;
 npm install -g jsonpath;
-npm install enum
+npm install -g enum;
+
+node fhir2avdl-datatypes.js ;
 
 
 1 https://github.com/adrai/enum

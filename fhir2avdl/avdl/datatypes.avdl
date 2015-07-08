@@ -44,7 +44,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:int
 */
- union { null, xs:int} value = null;
+ union { null, int} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -86,7 +86,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime
 */
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -117,7 +117,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:integer
 */
- union { null, xs:integer} value = null;
+ union { null, int} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -148,7 +148,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:string
 */
- union { null, xs:string} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -190,7 +190,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:xs:gYear, xs:gYearMonth, xs:date
 */
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -232,7 +232,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:decimal
 */
- union { null, xs:decimal} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -274,7 +274,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:anyURI
 */
- union { null, xs:anyURI} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -305,7 +305,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:string
 */
- union { null, xs:string} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -347,7 +347,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:base64Binary
 */
- union { null, xs:base64Binary} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -389,7 +389,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:time
 */
- union { null, xs:time} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -420,7 +420,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:uri
 */
- union { null, xs:uri} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -451,7 +451,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:integer
 */
- union { null, xs:integer} value = null;
+ union { null, int} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -493,7 +493,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:string
 */
- union { null, xs:string} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -535,7 +535,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:boolean
 */
- union { null, xs:boolean} value = null;
+ union { null, boolean} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -566,7 +566,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:uri
 */
- union { null, xs:uri} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -608,7 +608,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:xs:dateTime
 */
- union { null, xs:dateTime} value = null;
+ union { null, string} value = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -725,7 +725,7 @@
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} code = null;
+ union { null, string} code = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Coding.display
@@ -853,7 +853,7 @@
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} comparator = null;
+ union { null, string} comparator = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Quantity.units
@@ -888,7 +888,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} code = null;
+ union { null, string} code = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -930,7 +930,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} contentType = null;
+ union { null, string} contentType = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Attachment.language
@@ -941,7 +941,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} language = null;
+ union { null, string} language = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Attachment.data
@@ -974,7 +974,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:unsignedInt
 */
- union { null, unsignedInt} size = null;
+ union { null, int} size = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Attachment.hash
@@ -1379,7 +1379,7 @@ Absolute URLs do not need to point to a FHIR RESTful server, though this is the 
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} use = null;
+ union { null, string} use = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Identifier.type
@@ -1557,24 +1557,27 @@ Absolute URLs do not need to point to a FHIR RESTful server, though this is the 
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, xs:int} valuexs:int = null;
+ union { null, int} valuexs:int = null;
  union { null, id} valueid = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} valuexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
- union { null, xs:integer} valuexs:integer = null;
- union { null, xs:string} valuexs:string = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date} valuexs:xs:gYear, xs:gYearMonth, xs:date = null;
- union { null, xs:decimal} valuexs:decimal = null;
- union { null, xs:anyURI} valuexs:anyURI = null;
- union { null, xs:base64Binary} valuexs:base64Binary = null;
- union { null, xs:time} valuexs:time = null;
- union { null, xs:uri} valuexs:uri = null;
- union { null, xs:boolean} valuexs:boolean = null;
- union { null, xs:dateTime} valuexs:dateTime = null;
+ union { null, string} valuexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, int} valuexs:integer = null;
+ union { null, string} valuexs:string = null;
+ union { null, string} valuexs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, string} valuexs:decimal = null;
+ union { null, string} valuexs:anyURI = null;
+ union { null, string} valuexs:base64Binary = null;
+ union { null, string} valuexs:time = null;
+ union { null, string} valuexs:uri = null;
+ union { null, boolean} valuexs:boolean = null;
+ union { null, string} valuexs:dateTime = null;
  union { null, dateTime} valuedateTime = null;
  union { null, uri} valueuri = null;
  union { null, string} valuestring = null;
- union { null, code} valuecode = null;
+ union { null, string} valuecode = null;
  union { null, boolean} valueboolean = null;
+ union { null, string} valueinstant = null;
+ union { null, int} valueunsignedInt = null;
+ union { null, int} valueinteger = null;
  union { null, Extension} valueExtension = null;
  union { null, Quantity} valueQuantity = null;
  union { null, decimal} valuedecimal = null;
@@ -1584,11 +1587,8 @@ Absolute URLs do not need to point to a FHIR RESTful server, though this is the 
  union { null, Coding} valueCoding = null;
  union { null, Period} valuePeriod = null;
  union { null, CodeableConcept} valueCodeableConcept = null;
- union { null, instant} valueinstant = null;
- union { null, unsignedInt} valueunsignedInt = null;
  union { null, xhtml} valuexhtml = null;
  union { null, Element} valueElement = null;
- union { null, integer} valueinteger = null;
  union { null, Duration} valueDuration = null;
 }
 /**
@@ -1765,7 +1765,7 @@ Absolute URLs do not need to point to a FHIR RESTful server, though this is the 
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null,  array<code>} representation = null;
+ union { null,  array<string>} representation = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.name
@@ -1942,7 +1942,7 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:integer
 */
- union { null, integer} min = null;
+ union { null, int} min = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.max
@@ -2018,7 +2018,7 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null,  array<code>} type.aggregation = null;
+ union { null,  array<string>} type.aggregation = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.nameReference
@@ -2040,24 +2040,27 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, xs:int} defaultValuexs:int = null;
+ union { null, int} defaultValuexs:int = null;
  union { null, id} defaultValueid = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} defaultValuexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
- union { null, xs:integer} defaultValuexs:integer = null;
- union { null, xs:string} defaultValuexs:string = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date} defaultValuexs:xs:gYear, xs:gYearMonth, xs:date = null;
- union { null, xs:decimal} defaultValuexs:decimal = null;
- union { null, xs:anyURI} defaultValuexs:anyURI = null;
- union { null, xs:base64Binary} defaultValuexs:base64Binary = null;
- union { null, xs:time} defaultValuexs:time = null;
- union { null, xs:uri} defaultValuexs:uri = null;
- union { null, xs:boolean} defaultValuexs:boolean = null;
- union { null, xs:dateTime} defaultValuexs:dateTime = null;
+ union { null, string} defaultValuexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, int} defaultValuexs:integer = null;
+ union { null, string} defaultValuexs:string = null;
+ union { null, string} defaultValuexs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, string} defaultValuexs:decimal = null;
+ union { null, string} defaultValuexs:anyURI = null;
+ union { null, string} defaultValuexs:base64Binary = null;
+ union { null, string} defaultValuexs:time = null;
+ union { null, string} defaultValuexs:uri = null;
+ union { null, boolean} defaultValuexs:boolean = null;
+ union { null, string} defaultValuexs:dateTime = null;
  union { null, dateTime} defaultValuedateTime = null;
  union { null, uri} defaultValueuri = null;
  union { null, string} defaultValuestring = null;
- union { null, code} defaultValuecode = null;
+ union { null, string} defaultValuecode = null;
  union { null, boolean} defaultValueboolean = null;
+ union { null, string} defaultValueinstant = null;
+ union { null, int} defaultValueunsignedInt = null;
+ union { null, int} defaultValueinteger = null;
  union { null, Extension} defaultValueExtension = null;
  union { null, Quantity} defaultValueQuantity = null;
  union { null, decimal} defaultValuedecimal = null;
@@ -2067,11 +2070,8 @@ Where multiple codes exist in a terminology that could correspond to the data el
  union { null, Coding} defaultValueCoding = null;
  union { null, Period} defaultValuePeriod = null;
  union { null, CodeableConcept} defaultValueCodeableConcept = null;
- union { null, instant} defaultValueinstant = null;
- union { null, unsignedInt} defaultValueunsignedInt = null;
  union { null, xhtml} defaultValuexhtml = null;
  union { null, Element} defaultValueElement = null;
- union { null, integer} defaultValueinteger = null;
  union { null, Duration} defaultValueDuration = null;
 /**
  *该字段的父类型为:
@@ -2094,24 +2094,27 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, xs:int} fixedxs:int = null;
+ union { null, int} fixedxs:int = null;
  union { null, id} fixedid = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} fixedxs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
- union { null, xs:integer} fixedxs:integer = null;
- union { null, xs:string} fixedxs:string = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date} fixedxs:xs:gYear, xs:gYearMonth, xs:date = null;
- union { null, xs:decimal} fixedxs:decimal = null;
- union { null, xs:anyURI} fixedxs:anyURI = null;
- union { null, xs:base64Binary} fixedxs:base64Binary = null;
- union { null, xs:time} fixedxs:time = null;
- union { null, xs:uri} fixedxs:uri = null;
- union { null, xs:boolean} fixedxs:boolean = null;
- union { null, xs:dateTime} fixedxs:dateTime = null;
+ union { null, string} fixedxs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, int} fixedxs:integer = null;
+ union { null, string} fixedxs:string = null;
+ union { null, string} fixedxs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, string} fixedxs:decimal = null;
+ union { null, string} fixedxs:anyURI = null;
+ union { null, string} fixedxs:base64Binary = null;
+ union { null, string} fixedxs:time = null;
+ union { null, string} fixedxs:uri = null;
+ union { null, boolean} fixedxs:boolean = null;
+ union { null, string} fixedxs:dateTime = null;
  union { null, dateTime} fixeddateTime = null;
  union { null, uri} fixeduri = null;
  union { null, string} fixedstring = null;
- union { null, code} fixedcode = null;
+ union { null, string} fixedcode = null;
  union { null, boolean} fixedboolean = null;
+ union { null, string} fixedinstant = null;
+ union { null, int} fixedunsignedInt = null;
+ union { null, int} fixedinteger = null;
  union { null, Extension} fixedExtension = null;
  union { null, Quantity} fixedQuantity = null;
  union { null, decimal} fixeddecimal = null;
@@ -2121,11 +2124,8 @@ Where multiple codes exist in a terminology that could correspond to the data el
  union { null, Coding} fixedCoding = null;
  union { null, Period} fixedPeriod = null;
  union { null, CodeableConcept} fixedCodeableConcept = null;
- union { null, instant} fixedinstant = null;
- union { null, unsignedInt} fixedunsignedInt = null;
  union { null, xhtml} fixedxhtml = null;
  union { null, Element} fixedElement = null;
- union { null, integer} fixedinteger = null;
  union { null, Duration} fixedDuration = null;
 /**
  *该字段的父类型为:
@@ -2137,24 +2137,27 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, xs:int} patternxs:int = null;
+ union { null, int} patternxs:int = null;
  union { null, id} patternid = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} patternxs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
- union { null, xs:integer} patternxs:integer = null;
- union { null, xs:string} patternxs:string = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date} patternxs:xs:gYear, xs:gYearMonth, xs:date = null;
- union { null, xs:decimal} patternxs:decimal = null;
- union { null, xs:anyURI} patternxs:anyURI = null;
- union { null, xs:base64Binary} patternxs:base64Binary = null;
- union { null, xs:time} patternxs:time = null;
- union { null, xs:uri} patternxs:uri = null;
- union { null, xs:boolean} patternxs:boolean = null;
- union { null, xs:dateTime} patternxs:dateTime = null;
+ union { null, string} patternxs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, int} patternxs:integer = null;
+ union { null, string} patternxs:string = null;
+ union { null, string} patternxs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, string} patternxs:decimal = null;
+ union { null, string} patternxs:anyURI = null;
+ union { null, string} patternxs:base64Binary = null;
+ union { null, string} patternxs:time = null;
+ union { null, string} patternxs:uri = null;
+ union { null, boolean} patternxs:boolean = null;
+ union { null, string} patternxs:dateTime = null;
  union { null, dateTime} patterndateTime = null;
  union { null, uri} patternuri = null;
  union { null, string} patternstring = null;
- union { null, code} patterncode = null;
+ union { null, string} patterncode = null;
  union { null, boolean} patternboolean = null;
+ union { null, string} patterninstant = null;
+ union { null, int} patternunsignedInt = null;
+ union { null, int} patterninteger = null;
  union { null, Extension} patternExtension = null;
  union { null, Quantity} patternQuantity = null;
  union { null, decimal} patterndecimal = null;
@@ -2164,11 +2167,8 @@ Where multiple codes exist in a terminology that could correspond to the data el
  union { null, Coding} patternCoding = null;
  union { null, Period} patternPeriod = null;
  union { null, CodeableConcept} patternCodeableConcept = null;
- union { null, instant} patterninstant = null;
- union { null, unsignedInt} patternunsignedInt = null;
  union { null, xhtml} patternxhtml = null;
  union { null, Element} patternElement = null;
- union { null, integer} patterninteger = null;
  union { null, Duration} patternDuration = null;
 /**
  *该字段的父类型为:
@@ -2182,24 +2182,27 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, xs:int} examplexs:int = null;
+ union { null, int} examplexs:int = null;
  union { null, id} exampleid = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} examplexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
- union { null, xs:integer} examplexs:integer = null;
- union { null, xs:string} examplexs:string = null;
- union { null, xs:xs:gYear, xs:gYearMonth, xs:date} examplexs:xs:gYear, xs:gYearMonth, xs:date = null;
- union { null, xs:decimal} examplexs:decimal = null;
- union { null, xs:anyURI} examplexs:anyURI = null;
- union { null, xs:base64Binary} examplexs:base64Binary = null;
- union { null, xs:time} examplexs:time = null;
- union { null, xs:uri} examplexs:uri = null;
- union { null, xs:boolean} examplexs:boolean = null;
- union { null, xs:dateTime} examplexs:dateTime = null;
+ union { null, string} examplexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, int} examplexs:integer = null;
+ union { null, string} examplexs:string = null;
+ union { null, string} examplexs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, string} examplexs:decimal = null;
+ union { null, string} examplexs:anyURI = null;
+ union { null, string} examplexs:base64Binary = null;
+ union { null, string} examplexs:time = null;
+ union { null, string} examplexs:uri = null;
+ union { null, boolean} examplexs:boolean = null;
+ union { null, string} examplexs:dateTime = null;
  union { null, dateTime} exampledateTime = null;
  union { null, uri} exampleuri = null;
  union { null, string} examplestring = null;
- union { null, code} examplecode = null;
+ union { null, string} examplecode = null;
  union { null, boolean} exampleboolean = null;
+ union { null, string} exampleinstant = null;
+ union { null, int} exampleunsignedInt = null;
+ union { null, int} exampleinteger = null;
  union { null, Extension} exampleExtension = null;
  union { null, Quantity} exampleQuantity = null;
  union { null, decimal} exampledecimal = null;
@@ -2209,11 +2212,8 @@ If the example value are fully populated, the publication tool can generate an i
  union { null, Coding} exampleCoding = null;
  union { null, Period} examplePeriod = null;
  union { null, CodeableConcept} exampleCodeableConcept = null;
- union { null, instant} exampleinstant = null;
- union { null, unsignedInt} exampleunsignedInt = null;
  union { null, xhtml} examplexhtml = null;
  union { null, Element} exampleElement = null;
- union { null, integer} exampleinteger = null;
  union { null, Duration} exampleDuration = null;
 /**
  *该字段的父类型为:
@@ -2225,7 +2225,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:integer
 */
- union { null, integer} maxLength = null;
+ union { null, int} maxLength = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.condition
@@ -2483,7 +2483,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} mapping.language = null;
+ union { null, string} mapping.language = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.mapping.map
@@ -2590,7 +2590,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:integer
 */
- union { null, integer} repeat.count = null;
+ union { null, int} repeat.count = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.repeat.duration
@@ -2623,7 +2623,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} repeat.durationUnits = null;
+ union { null, string} repeat.durationUnits = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.repeat.frequency
@@ -2634,7 +2634,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:integer
 */
- union { null, integer} repeat.frequency = null;
+ union { null, int} repeat.frequency = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.repeat.frequencyMax
@@ -2645,7 +2645,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:integer
 */
- union { null, integer} repeat.frequencyMax = null;
+ union { null, int} repeat.frequencyMax = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.repeat.period
@@ -2678,7 +2678,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} repeat.periodUnits = null;
+ union { null, string} repeat.periodUnits = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.repeat.when
@@ -2689,7 +2689,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} repeat.when = null;
+ union { null, string} repeat.when = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.code
@@ -2742,7 +2742,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} use = null;
+ union { null, string} use = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Address.type
@@ -2753,7 +2753,7 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} type = null;
+ union { null, string} type = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Address.text
@@ -2873,7 +2873,7 @@ P.O. Box number, delivery hints, and similar address information.
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} use = null;
+ union { null, string} use = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:HumanName.text
@@ -2992,7 +2992,7 @@ P.O. Box number, delivery hints, and similar address information.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:instant
 */
- union { null, instant} lastUpdated = null;
+ union { null, string} lastUpdated = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Meta.profile
@@ -3073,7 +3073,7 @@ The list of tags is a set. Uniqueness is based the system/code, and version and 
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} system = null;
+ union { null, string} system = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ContactPoint.value
@@ -3095,7 +3095,7 @@ The list of tags is a set. Uniqueness is based the system/code, and version and 
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} use = null;
+ union { null, string} use = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ContactPoint.period
@@ -3159,7 +3159,7 @@ The list of tags is a set. Uniqueness is based the system/code, and version and 
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} comparator = null;
+ union { null, string} comparator = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Quantity.units
@@ -3194,7 +3194,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} code = null;
+ union { null, string} code = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
@@ -3247,7 +3247,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} comparator = null;
+ union { null, string} comparator = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Quantity.units
@@ -3282,7 +3282,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} code = null;
+ union { null, string} code = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
@@ -3335,7 +3335,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} comparator = null;
+ union { null, string} comparator = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Quantity.units
@@ -3370,7 +3370,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} code = null;
+ union { null, string} code = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
@@ -3423,7 +3423,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} comparator = null;
+ union { null, string} comparator = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Quantity.units
@@ -3458,7 +3458,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} code = null;
+ union { null, string} code = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Quantity
@@ -3511,7 +3511,7 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:true
  *该字段的数据类型是:code
 */
- union { null, code} comparator = null;
+ union { null, string} comparator = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Quantity.units
@@ -3546,6 +3546,6 @@ The context of use may additionally require a code from a particular system.
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:code
 */
- union { null, code} code = null;
+ union { null, string} code = null;
 }
 }
