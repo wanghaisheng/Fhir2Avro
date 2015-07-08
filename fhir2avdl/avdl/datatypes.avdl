@@ -1,5 +1,5 @@
 /**
- *本文件的更新日期为:2015-06-24T03:16:33.183+00:00
+ *本文件的更新日期为:2015-07-07T06:26:40.713+00:00
  *参考资料为: wget http://hl7-fhir.github.io/profiles-types.json
 */
 @namespace("org.fhir.messages.datatypes")
@@ -1064,6 +1064,71 @@ The context of use may additionally require a code from a particular system.
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
+ *该数据类型的名称为:Annotation
+ *该数据类型的全称为:Text node with attribution
+ *该数据类型的定义为:A  text note which also  contains information about who made the statement and when.
+ *该数据类型的描述为:For systems that do not have structured annotations, they can simply communicate a single annotation with no author or time. 
+This element may need to be included in narrative because of the potential for modifying information. 
+*Annotations SHOULD NOT* be used to communicate "modifying" information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible).
+*/
+  record Annotation {
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Annotation.id
+ *该字段的全称为:xml:id (or equivalent in JSON)
+ *该字段的定义为:unique id for the element within a resource (for internal references).
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:id
+*/
+ union { null, id} id = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Annotation.extension
+ *该字段的全称为:Additional Content defined by implementations
+ *该字段的定义为:May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+ *该字段的描述为:There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
+ *该字段的出现次数为:0..*
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Extension
+*/
+ union { null,  array<Extension>} extension = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Annotation.author[x]
+ *该字段的全称为:Individual responsible for the annotation
+ *该字段的定义为:The individual responsible for making the annotation.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:Reference
+*/
+ union { null, Reference} author[x] = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Annotation.time
+ *该字段的全称为:When the annotation was made
+ *该字段的定义为:Indicates when this particular annotation was made.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:dateTime
+*/
+ union { null, dateTime} time = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Annotation.text
+ *该字段的全称为:The annotation  - text content
+ *该字段的定义为:The text of the annotation.
+ *该字段的描述为:
+ *该字段的出现次数为:1..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:string
+*/
+}
+/**
+ *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
  *该数据类型的名称为:SampledData
  *该数据类型的全称为:A series of measurements taken by a device
  *该数据类型的定义为:A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
@@ -1492,7 +1557,39 @@ Absolute URLs do not need to point to a FHIR RESTful server, though this is the 
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, *} value[x] = null;
+ union { null, xs:int} valuexs:int = null;
+ union { null, id} valueid = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} valuexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, xs:integer} valuexs:integer = null;
+ union { null, xs:string} valuexs:string = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date} valuexs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, xs:decimal} valuexs:decimal = null;
+ union { null, xs:anyURI} valuexs:anyURI = null;
+ union { null, xs:base64Binary} valuexs:base64Binary = null;
+ union { null, xs:time} valuexs:time = null;
+ union { null, xs:uri} valuexs:uri = null;
+ union { null, xs:boolean} valuexs:boolean = null;
+ union { null, xs:dateTime} valuexs:dateTime = null;
+ union { null, dateTime} valuedateTime = null;
+ union { null, uri} valueuri = null;
+ union { null, string} valuestring = null;
+ union { null, code} valuecode = null;
+ union { null, boolean} valueboolean = null;
+ union { null, Extension} valueExtension = null;
+ union { null, Quantity} valueQuantity = null;
+ union { null, decimal} valuedecimal = null;
+ union { null, base64Binary} valuebase64Binary = null;
+ union { null, Reference} valueReference = null;
+ union { null, positiveInt} valuepositiveInt = null;
+ union { null, Coding} valueCoding = null;
+ union { null, Period} valuePeriod = null;
+ union { null, CodeableConcept} valueCodeableConcept = null;
+ union { null, instant} valueinstant = null;
+ union { null, unsignedInt} valueunsignedInt = null;
+ union { null, xhtml} valuexhtml = null;
+ union { null, Element} valueElement = null;
+ union { null, integer} valueinteger = null;
+ union { null, Duration} valueDuration = null;
 }
 /**
  *该数据类型的父类型为:http://hl7.org/fhir/StructureDefinition/Element
@@ -1712,9 +1809,9 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的描述为:
  *该字段的出现次数为:0..1
  *该字段的存在是否会改变对整个资源的解释:
- *该字段的数据类型是:
+ *该字段的数据类型是:Element
 */
- union { null, } slicing = null;
+ union { null, Element} slicing = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.slicing.id
@@ -1865,9 +1962,9 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的描述为:The Type of the element can be left blank, in which case the type is inherited from the resource. The type can only be listed in this field if it is an allowed option in the base resource.
  *该字段的出现次数为:0..*
  *该字段的存在是否会改变对整个资源的解释:
- *该字段的数据类型是:
+ *该字段的数据类型是:Element
 */
- union { null,  array<>} type = null;
+ union { null,  array<Element>} type = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.type.id
@@ -1903,7 +2000,7 @@ Where multiple codes exist in a terminology that could correspond to the data el
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.type.profile
- *该字段的全称为:Profile.structure to apply
+ *该字段的全称为:Profile (StructureDefinition) to apply
  *该字段的定义为:Identifies a profile structure that SHALL hold for resources or datatypes referenced as the type of this element. Can be a local reference - to another structure in this profile, or a reference to a structure in another profile. When more than one profile is specified, the content must conform to all of them.
  *该字段的描述为:The reference might be a simple name in the form #[name], which is a reference to another named constraint in a resource - where the resource contains more than one constraint, or a URL which is a reference to a resource Profile, with a terminal #[name] which identifies a specific structure entry in the profile.
  *该字段的出现次数为:0..*
@@ -1943,7 +2040,39 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, *} defaultValue[x] = null;
+ union { null, xs:int} defaultValuexs:int = null;
+ union { null, id} defaultValueid = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} defaultValuexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, xs:integer} defaultValuexs:integer = null;
+ union { null, xs:string} defaultValuexs:string = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date} defaultValuexs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, xs:decimal} defaultValuexs:decimal = null;
+ union { null, xs:anyURI} defaultValuexs:anyURI = null;
+ union { null, xs:base64Binary} defaultValuexs:base64Binary = null;
+ union { null, xs:time} defaultValuexs:time = null;
+ union { null, xs:uri} defaultValuexs:uri = null;
+ union { null, xs:boolean} defaultValuexs:boolean = null;
+ union { null, xs:dateTime} defaultValuexs:dateTime = null;
+ union { null, dateTime} defaultValuedateTime = null;
+ union { null, uri} defaultValueuri = null;
+ union { null, string} defaultValuestring = null;
+ union { null, code} defaultValuecode = null;
+ union { null, boolean} defaultValueboolean = null;
+ union { null, Extension} defaultValueExtension = null;
+ union { null, Quantity} defaultValueQuantity = null;
+ union { null, decimal} defaultValuedecimal = null;
+ union { null, base64Binary} defaultValuebase64Binary = null;
+ union { null, Reference} defaultValueReference = null;
+ union { null, positiveInt} defaultValuepositiveInt = null;
+ union { null, Coding} defaultValueCoding = null;
+ union { null, Period} defaultValuePeriod = null;
+ union { null, CodeableConcept} defaultValueCodeableConcept = null;
+ union { null, instant} defaultValueinstant = null;
+ union { null, unsignedInt} defaultValueunsignedInt = null;
+ union { null, xhtml} defaultValuexhtml = null;
+ union { null, Element} defaultValueElement = null;
+ union { null, integer} defaultValueinteger = null;
+ union { null, Duration} defaultValueDuration = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.meaningWhenMissing
@@ -1965,7 +2094,39 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, *} fixed[x] = null;
+ union { null, xs:int} fixedxs:int = null;
+ union { null, id} fixedid = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} fixedxs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, xs:integer} fixedxs:integer = null;
+ union { null, xs:string} fixedxs:string = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date} fixedxs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, xs:decimal} fixedxs:decimal = null;
+ union { null, xs:anyURI} fixedxs:anyURI = null;
+ union { null, xs:base64Binary} fixedxs:base64Binary = null;
+ union { null, xs:time} fixedxs:time = null;
+ union { null, xs:uri} fixedxs:uri = null;
+ union { null, xs:boolean} fixedxs:boolean = null;
+ union { null, xs:dateTime} fixedxs:dateTime = null;
+ union { null, dateTime} fixeddateTime = null;
+ union { null, uri} fixeduri = null;
+ union { null, string} fixedstring = null;
+ union { null, code} fixedcode = null;
+ union { null, boolean} fixedboolean = null;
+ union { null, Extension} fixedExtension = null;
+ union { null, Quantity} fixedQuantity = null;
+ union { null, decimal} fixeddecimal = null;
+ union { null, base64Binary} fixedbase64Binary = null;
+ union { null, Reference} fixedReference = null;
+ union { null, positiveInt} fixedpositiveInt = null;
+ union { null, Coding} fixedCoding = null;
+ union { null, Period} fixedPeriod = null;
+ union { null, CodeableConcept} fixedCodeableConcept = null;
+ union { null, instant} fixedinstant = null;
+ union { null, unsignedInt} fixedunsignedInt = null;
+ union { null, xhtml} fixedxhtml = null;
+ union { null, Element} fixedElement = null;
+ union { null, integer} fixedinteger = null;
+ union { null, Duration} fixedDuration = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.pattern[x]
@@ -1976,7 +2137,39 @@ Where multiple codes exist in a terminology that could correspond to the data el
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, *} pattern[x] = null;
+ union { null, xs:int} patternxs:int = null;
+ union { null, id} patternid = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} patternxs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, xs:integer} patternxs:integer = null;
+ union { null, xs:string} patternxs:string = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date} patternxs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, xs:decimal} patternxs:decimal = null;
+ union { null, xs:anyURI} patternxs:anyURI = null;
+ union { null, xs:base64Binary} patternxs:base64Binary = null;
+ union { null, xs:time} patternxs:time = null;
+ union { null, xs:uri} patternxs:uri = null;
+ union { null, xs:boolean} patternxs:boolean = null;
+ union { null, xs:dateTime} patternxs:dateTime = null;
+ union { null, dateTime} patterndateTime = null;
+ union { null, uri} patternuri = null;
+ union { null, string} patternstring = null;
+ union { null, code} patterncode = null;
+ union { null, boolean} patternboolean = null;
+ union { null, Extension} patternExtension = null;
+ union { null, Quantity} patternQuantity = null;
+ union { null, decimal} patterndecimal = null;
+ union { null, base64Binary} patternbase64Binary = null;
+ union { null, Reference} patternReference = null;
+ union { null, positiveInt} patternpositiveInt = null;
+ union { null, Coding} patternCoding = null;
+ union { null, Period} patternPeriod = null;
+ union { null, CodeableConcept} patternCodeableConcept = null;
+ union { null, instant} patterninstant = null;
+ union { null, unsignedInt} patternunsignedInt = null;
+ union { null, xhtml} patternxhtml = null;
+ union { null, Element} patternElement = null;
+ union { null, integer} patterninteger = null;
+ union { null, Duration} patternDuration = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.example[x]
@@ -1989,7 +2182,39 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:*
 */
- union { null, *} example[x] = null;
+ union { null, xs:int} examplexs:int = null;
+ union { null, id} exampleid = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime} examplexs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime = null;
+ union { null, xs:integer} examplexs:integer = null;
+ union { null, xs:string} examplexs:string = null;
+ union { null, xs:xs:gYear, xs:gYearMonth, xs:date} examplexs:xs:gYear, xs:gYearMonth, xs:date = null;
+ union { null, xs:decimal} examplexs:decimal = null;
+ union { null, xs:anyURI} examplexs:anyURI = null;
+ union { null, xs:base64Binary} examplexs:base64Binary = null;
+ union { null, xs:time} examplexs:time = null;
+ union { null, xs:uri} examplexs:uri = null;
+ union { null, xs:boolean} examplexs:boolean = null;
+ union { null, xs:dateTime} examplexs:dateTime = null;
+ union { null, dateTime} exampledateTime = null;
+ union { null, uri} exampleuri = null;
+ union { null, string} examplestring = null;
+ union { null, code} examplecode = null;
+ union { null, boolean} exampleboolean = null;
+ union { null, Extension} exampleExtension = null;
+ union { null, Quantity} exampleQuantity = null;
+ union { null, decimal} exampledecimal = null;
+ union { null, base64Binary} examplebase64Binary = null;
+ union { null, Reference} exampleReference = null;
+ union { null, positiveInt} examplepositiveInt = null;
+ union { null, Coding} exampleCoding = null;
+ union { null, Period} examplePeriod = null;
+ union { null, CodeableConcept} exampleCodeableConcept = null;
+ union { null, instant} exampleinstant = null;
+ union { null, unsignedInt} exampleunsignedInt = null;
+ union { null, xhtml} examplexhtml = null;
+ union { null, Element} exampleElement = null;
+ union { null, integer} exampleinteger = null;
+ union { null, Duration} exampleDuration = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.maxLength
@@ -2020,9 +2245,9 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的描述为:Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
  *该字段的出现次数为:0..*
  *该字段的存在是否会改变对整个资源的解释:
- *该字段的数据类型是:
+ *该字段的数据类型是:Element
 */
- union { null,  array<>} constraint = null;
+ union { null,  array<Element>} constraint = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.constraint.id
@@ -2057,15 +2282,15 @@ If the example value are fully populated, the publication tool can generate an i
 */
 /**
  *该字段的父类型为:
- *该字段的路径为:ElementDefinition.constraint.name
- *该字段的全称为:Short human label
- *该字段的定义为:Used to label the constraint in OCL or in short displays incapable of displaying the full human description.
- *该字段的描述为:
+ *该字段的路径为:ElementDefinition.constraint.requirements
+ *该字段的全称为:Why this constraint necessary or appropriate
+ *该字段的定义为:Description of why this constraint is necessary or appropriate.
+ *该字段的描述为:To be used if the reason for the constraint may not be intuitive to all implementers.
  *该字段的出现次数为:0..1
  *该字段的存在是否会改变对整个资源的解释:
  *该字段的数据类型是:string
 */
- union { null, string} constraint.name = null;
+ union { null, string} constraint.requirements = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.constraint.severity
@@ -2137,9 +2362,9 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的描述为:
  *该字段的出现次数为:0..1
  *该字段的存在是否会改变对整个资源的解释:
- *该字段的数据类型是:
+ *该字段的数据类型是:Element
 */
- union { null, } binding = null;
+ union { null, Element} binding = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.binding.id
@@ -2213,9 +2438,9 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的描述为:Mappings are not necessarily specific enough for safe translation.
  *该字段的出现次数为:0..*
  *该字段的存在是否会改变对整个资源的解释:
- *该字段的数据类型是:
+ *该字段的数据类型是:Element
 */
- union { null,  array<>} mapping = null;
+ union { null,  array<Element>} mapping = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:ElementDefinition.mapping.id
@@ -2319,9 +2544,9 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的描述为:
  *该字段的出现次数为:0..1
  *该字段的存在是否会改变对整个资源的解释:
- *该字段的数据类型是:
+ *该字段的数据类型是:Element
 */
- union { null, } repeat = null;
+ union { null, Element} repeat = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.repeat.id
@@ -2346,15 +2571,15 @@ If the example value are fully populated, the publication tool can generate an i
  union { null,  array<Extension>} repeat.extension = null;
 /**
  *该字段的父类型为:
- *该字段的路径为:Timing.repeat.bounds
- *该字段的全称为:Start and/or end limits
- *该字段的定义为:Outer bounds for start and/or end limits of the timing schedule.
+ *该字段的路径为:Timing.repeat.bounds[x]
+ *该字段的全称为:Length/Range of lengths, or (Start and/or end) limits
+ *该字段的定义为:Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
  *该字段的描述为:
  *该字段的出现次数为:0..1
  *该字段的存在是否会改变对整个资源的解释:
- *该字段的数据类型是:Period
+ *该字段的数据类型是:Duration
 */
- union { null, Period} repeat.bounds = null;
+ union { null, Duration} repeat.bounds[x] = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.repeat.count
@@ -2377,6 +2602,17 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的数据类型是:decimal
 */
  union { null, decimal} repeat.duration = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Timing.repeat.durationMax
+ *该字段的全称为:How long when it happens (Max)
+ *该字段的定义为:The upper limit of how long this thing happens for when it happens.
+ *该字段的描述为:For some events the duration is part of the definition of the event (e.g. IV infusions). For others, it's part of the timing specification (e.g. exercise).
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:decimal
+*/
+ union { null, decimal} repeat.durationMax = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Timing.repeat.durationUnits
@@ -2507,6 +2743,17 @@ If the example value are fully populated, the publication tool can generate an i
  *该字段的数据类型是:code
 */
  union { null, code} use = null;
+/**
+ *该字段的父类型为:
+ *该字段的路径为:Address.type
+ *该字段的全称为:postal | physical | both
+ *该字段的定义为:Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+ *该字段的描述为:
+ *该字段的出现次数为:0..1
+ *该字段的存在是否会改变对整个资源的解释:
+ *该字段的数据类型是:code
+*/
+ union { null, code} type = null;
 /**
  *该字段的父类型为:
  *该字段的路径为:Address.text

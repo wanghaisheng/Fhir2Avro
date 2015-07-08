@@ -6,8 +6,44 @@ var fs = require('fs');
 
 var jp = require('jsonpath');
 
+var Enum = require('enum');
 
-
+var FHIRdataTypesToAvro = new Enum({
+    'xs:int': 'xs:int',
+    'id': 'id',
+    'xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime': 'xs:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime',
+    'xs:integer': 'xs:integer',
+    'xs:string': 'xs:string',
+    'xs:xs:gYear, xs:gYearMonth, xs:date': 'xs:xs:gYear, xs:gYearMonth, xs:date',
+    'xs:decimal': 'xs:decimal',
+    'xs:anyURI': 'xs:anyURI',
+    'xs:base64Binary': 'xs:base64Binary',
+    'xs:time': 'xs:time',
+    'xs:uri': 'xs:uri',
+    'xs:boolean': 'xs:boolean',
+    'xs:dateTime': 'xs:dateTime',
+    'dateTime': 'dateTime',
+    'uri': 'uri',
+    'string': 'string',
+    'code': 'code',
+    'boolean': 'boolean',
+    'Extension': 'Extension',
+    'Quantity': 'Quantity',
+    'decimal': 'decimal',
+    'base64Binary': 'base64Binary',
+    'Reference': 'Reference',
+    'positiveInt': 'positiveInt',
+    'Coding': 'Coding',
+    'Period': 'Period',
+    'CodeableConcept': 'CodeableConcept',
+    'instant': 'instant',
+    'unsignedInt': 'unsignedInt',
+    // '*','*',
+    'xhtml': 'xhtml',
+    'Element': 'Element',
+    'integer': 'integer',
+    'Duration': 'Duration'
+});
 //读取数据类型的文件
 fs.readFile('profiles-types.json', 'utf8', function(err, data) {
     if (err) throw err;
@@ -40,15 +76,36 @@ fs.readFile('profiles-types.json', 'utf8', function(err, data) {
             var element_isModifier = jp.query(resource_elements[i], '$.isModifier');
 
             dataTypefileContent = dataTypefileContent + "\r\r/**\n" + " *该字段的父类型为:" + jp.query(resource_elements[i], '$.base') + "\n" + " *该字段的路径为:" + element_name + "\n" + " *该字段的全称为:" + element_longName + "\n" + " *该字段的定义为:" + element_definition + "\n" + " *该字段的描述为:" + element_comment + "\n" + " *该字段的出现次数为:" + element_minimum_card + ".." + element_maximum_card + "\n" + " *该字段的存在是否会改变对整个资源的解释:" + element_isModifier + "\n" + " *该字段的数据类型是:" + element_datatype + "\n" + "*/\n";
+            // 数据类型从fhir到avro基本类型
+            if (FHIRdataTypesToAvro.get(element_datatype)) {
+                element_datatype = FHIRdataTypesToAvro.get(element_datatype);
+                element_name = element_name.toString().replace(jp.query(resource_elements[0], '$.path') + '.', '');
+                if (element_minimum_card === '0' && element_maximum_card === '1') {
+                    dataTypefileContent = dataTypefileContent + " union { null, " + element_datatype + "} " + element_name + " = null;\n";
+                } else if (element_minimum_card === '0' && element_maximum_card === '*') {
+                    dataTypefileContent = dataTypefileContent + " union { null,  array<" + element_datatype + ">} " + element_name + " = null;\n";
+
+                }
+            } else {
+                element_datatype = element_datatype;
+                element_name = element_name.toString().replace(jp.query(resource_elements[0], '$.path') + '.', '');
+                if (element_minimum_card === '0' && element_maximum_card === '1') {
+                    FHIRdataTypesToAvro.enums.forEach(function(element) {
+                        dataTypefileContent = dataTypefileContent + " union { null, " + element + "} " + element_name.replace('[x]', element) + " = null;\n";
+
+                    });
+
+                } else if (element_minimum_card === '0' && element_maximum_card === '*') {
+                    FHIRdataTypesToAvro.enums.forEach(function(element) {
+                        dataTypefileContent = dataTypefileContent + " union { null,  array<" + element + ">} " + element_name.replace('[x]', element) + " = null;\n";
+
+                    });
 
 
-            element_name = element_name.toString().replace(jp.query(resource_elements[0], '$.path') + '.', '');
-            if (element_minimum_card === '0' && element_maximum_card === '1') {
-                dataTypefileContent = dataTypefileContent + " union { null, " + element_datatype + "} " + element_name + " = null;\n";
-            } else if (element_minimum_card === '0' && element_maximum_card === '*') {
-                dataTypefileContent = dataTypefileContent + " union { null,  array<" + element_datatype + ">} " + element_name + " = null;\n";
-
+                }
             }
+
+
 
         }
         dataTypefileContent = dataTypefileContent + "}\n";
